@@ -3,14 +3,19 @@
   "version": "0.0.1",
   "description": "\"Nodejs daemon to periodically categorize and log CSC demo files. Pulls demo files from the CSC s3 bucket\"",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "ts-node-esm index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "darkstars31@gmail.com",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
+    "jszip": "^3.10.1",
+    "p-limit": "^4.0.0",
+    "pino": "^8.15.0",
+    "ts-node": "^10.9.1",
     "xml2js": "^0.6.0"
   },
   "devDependencies": {
