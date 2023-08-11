@@ -1,9 +1,16 @@
 import axios from "axios";
 import xml2js from "xml2js"
+import { fileURLToPath } from "url";
 import fs, { promises as fsPromises } from "fs";
+import { exec } from 'child_process';
+import path, { dirname } from "path";
 import pLimit from "p-limit";
 import JSZip from "jszip";
+import papa from "papaparse";
 import pino from "pino";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 import { demoFileIdentification } from "./file-identification-util.js";
 
@@ -21,6 +28,21 @@ const logger = pino();
 const args = process.argv.slice(2);
 console.info( args );
 
+const copyDir = async (src: string, dest: string) => {
+    await fsPromises.mkdir(dest, { recursive: true });
+    let entries = await fsPromises.readdir(src, { withFileTypes: true });
+
+    for (let [index, entry] of entries.entries()) {
+		process.stdout.clearLine(0);
+		console.info( `\rCopying ${index+1} of ${entries.length}` );
+        let srcPath = path.join(src, entry.name);
+        let destPath = path.join(dest, entry.name);
+
+        entry.isDirectory() ?
+            await copyDir(srcPath, destPath) :
+            await fsPromises.copyFile(srcPath, destPath);
+    }
+}
 
 const recuriveNavigate = async (directory: any, result: any) => {
 	const url = `${config.url}?delimiter=/&prefix=${directory}`;
@@ -79,10 +101,10 @@ const recuriveNavigate = async (directory: any, result: any) => {
 const unzipFiles = async () => {
 	return new Promise((resolve, reject) => {
 		const files = fs.readdirSync(config.downloadPath);
-		const promises = files.map((file: any) => {
+		const zipFiles = files.filter((file: any) => file.endsWith(".zip"));
+		const promises = zipFiles.map((file: any) => {
 			return unZipLimit(() => unzipFile(config.downloadPath + file));
 		});
-		console.info(promises.length);
 		Promise.all(promises).then(() => {
 			resolve(1);
 		})
@@ -117,6 +139,8 @@ const unzipFile = async ( filePath: string ) => {
 			.then((file: string | NodeJS.ArrayBufferView) => {
 				const newFileName = fileName?.includes(".zip") ? fileName?.replace(".zip", "") : fileName;
 				fs.writeFileSync(`${config.downloadPath}/${matchDay}/${newFileName}`, file);
+				fs.unlinkSync(fullPath);
+				fs.writeFileSync(`${config.downloadPath}/${fileName}`, 'Original File Removed after unzipping.');
 				resolve(1);
 			}).catch((error) => {
 				console.info(`Failed to unzip ${fileName} w/ error: ${error}`);
@@ -134,7 +158,7 @@ const doesFileAlreadyExist = (filePath: string) => {
 	return fs.existsSync(config.downloadPath + filePath.split("/").at(-1));
 }
 
-const processFiles = async (filesToProcess: any[]) => {
+const downloadFiles = async (filesToProcess: any[]) => {
 	
 	const promisesList = filesToProcess
 	.filter( file => !doesFileAlreadyExist(file.Key[0]))
@@ -154,6 +178,32 @@ const processFiles = async (filesToProcess: any[]) => {
 	});
 }
 
+const moveDemosAndStartParser = async () => {
+	console.info( "Moving Demo Files to DemoScrape In directory.." );
+	await copyDir(`${config.downloadPath}/${args[1]}`, `${__dirname}/demoScrape2/in`);
+
+	console.info("Starting Demo parser");
+	return new Promise((resolve, reject) => {
+		exec(`go run .`, { cwd: `${__dirname}/demoScrape2` }, (err: any, stdout: any, stderr: any) => {
+			if (err) {
+			console.error(`Error with stats parser\n ${err}`);
+			console.error(stderr);
+			return;
+			}
+
+			resolve(stdout.trim());
+		});
+	});
+}
+
+const readCSVs = async () => {
+	const files = fs.readdirSync(`${__dirname}/demoScrape2/out`);
+	const csvFiles = files.filter((file: any) => file.endsWith(".csv"));
+	console.info(`Found ${csvFiles.length} CSV files`);
+	const json = papa.parse( await fsPromises.readFile(`${__dirname}/demoScrape2/out/${csvFiles[0]}`, "utf8"), { header: true }).data;
+	console.info( json.filter( (item: any) => item.steam !== '') );
+}
+
 
 const main = async () => {
 	console.time( "execution time");
@@ -171,13 +221,17 @@ const main = async () => {
 		}
 	});
 
-	const filesToDownload: any[] = demos.files.filter((file: any) => file.Key[0].includes(".zip"));
+	//const filesToDownload: any[] = demos.files.filter((file: any) => file.Key[0].includes(".zip"));
 
-	await processFiles(filesToDownload);
+	//await downloadFiles(filesToDownload);
 
-	await unzipFiles();
+	//await unzipFiles();
 
-	console.timeEnd( "execution time");
+	await moveDemosAndStartParser();
+
+	await readCSVs();
+
+	console.timeEnd( "execution time" );
   	console.info("Finished");
 
 };

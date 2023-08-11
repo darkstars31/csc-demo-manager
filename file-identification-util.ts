@@ -52,6 +52,6 @@ export const demoFileIdentification = (fullPath: string) => {
         mapPlayed: file.split("-")[6],
         year: file.split("-")[7],
         month: file.split("-")[8],
-        day: file.split("-")[9].split("_")[0],
+        day: file.split("-")[9]?.split("_")[0],
     };
 }
