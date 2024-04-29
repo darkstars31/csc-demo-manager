@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Match {
+  id                 Int                 @id @default(autoincrement())
+  createdAt          DateTime            @default(now())
+  type               String              @db.VarChar(255)
+  match_uuid         String              @unique @db.VarChar(255)
+  csc_match_id       String?             @unique @db.VarChar(255)
+  Map                String              @db.VarChar(255)
+  matchStartTime     DateTime?           @db.Timestamp(6)
+  server             String?             @db.VarChar(255)
+  Match_Player_Statx Match_Player_Stat[] @relation("MatchUuidRef")
+}
+
+model Match_Player_Stat {
+  id             Int      @id @default(autoincrement())
+  createdAt      DateTime @default(now())
+  csc_match_id   String?  @db.VarChar(255)
+  match_uuid     String   @db.VarChar(255)
+  Map            String   @db.VarChar(255)
+  Team           String   @db.VarChar(255)
+  steam          String   @db.VarChar(255)
+  Name           String   @db.VarChar(255)
+  Rating         Float
+  Kills          Int
+  Assists        Int
+  Deaths         Int
+  ADR            Int
+  KAST           Float
+  Impact         Float
+  CT             Float
+  T              Float
+  ADP            Float
+  SuppR          Int
+  SuppX          Int
+  UD             Int
+  EF             Int
+  F_Ass          Int
+  Util           Int
+  HS             Int
+  AWP_K          Int
+  F_Kills        Int
+  F_Deaths       Int
+  Entries        Int
+  Saves          Int
+  Trades         Int
+  Traded         Int
+  twoK           Int
+  threeK         Int
+  fourK          Int
+  fiveK          Int
+  cl_1v1         Int
+  cl_1v2         Int
+  cl_1v3         Int
+  cl_1v4         Int
+  cl_1v5         Int
+  Rounds         Int
+  RF             Int
+  RA             Int
+  Damage         Int
+  XTaken         Int
+  ATD            Int
+  ADP_CT         Float
+  ADP_T          Float
+  Smokes         Int
+  Flashes        Int
+  Fires          Int
+  Nades          Int
+  FireX          Int
+  NadeX          Int
+  EFT            Int
+  RWK            Int
+  IWR            Float
+  KPA            Float
+  tOL            Int
+  ctOK           Int
+  ctOL           Int
+  tRounds        Int
+  tRF            Int
+  ctAWP          Int
+  ctK            Int
+  lurks          Int
+  WLP            Float
+  MIP            Float
+  match_uuid_ref Match    @relation("MatchUuidRef", fields: [match_uuid], references: [match_uuid])
+}
