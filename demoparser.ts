@@ -5,12 +5,13 @@ import { promisify } from 'util';
 import papa from "papaparse";
 import { prisma } from "./prisma-wrapper.ts"
 import { config } from "./config.ts"
+import { analyzeDemo, DemoSource, ExportFormat } from '@akiver/cs-demo-analyzer';
 
 import { fileURLToPath } from 'url';
 import pLimit from "p-limit";
 
 const promiseExec = promisify(exec);
-const parseLimit = pLimit(3);
+const parseLimit = pLimit(6);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -49,19 +50,52 @@ export const moveDemosAndStartParser = async () => {
 	});
 }
 
-export const processDemosThroughAnalyzer = async () => {
+export const processDemosThroughAnalyzerFork = async () => {
 	console.info("Starting Demo Analyzer");
-	const demos = await fsPromises.readdir(`${config.downloadPath}unzipped`, { withFileTypes: true });
+	const demos = (await fsPromises.readdir(`${config.downloadPath}unzipped`, { withFileTypes: true })).filter( demo => demo.name.endsWith(".dem") );
 	console.info("Demos Found: ", demos.length);
 	let progress = 0;
 	const demoPromises = demos.map(async (demo: any) => 
 		parseLimit(async () => {
-			const { stderr } = await promiseExec(`csda.exe -demo-path ${demo.path}/${demo.name} -format json -output ../out -source faceit`, { cwd: `${__dirname}/bin/` })
+			const { stderr } = await promiseExec(`csda.exe -demo-path ${demo.path}/${demo.name} -format json -output ../out -source faceit -minify`, { cwd: `${__dirname}/bin/` })
 			if (stderr) {
 				console.error(`Error with stats parser\n ${stderr}`);
 				console.error(stderr);
 				return;
 			}
+			progress++;
+			console.info(`Completed Analysis ${demo.name}, ${progress}/${demoPromises.length}`)
+		}
+		));
+	
+	await Promise.all(demoPromises).then(() => {
+		console.info("Done!");
+	});
+}
+
+export const processDemosThroughAnalyzer = async () => {
+	console.info("Starting Demo Analyzer");
+	const demos = (await fsPromises.readdir(`${config.downloadPath}unzipped`, { withFileTypes: true })).filter( demo => demo.name.endsWith(".dem") );
+	console.info("Demos Found: ", demos.length);
+	let progress = 0;
+	const demoPromises = demos.map(async (demo: any) => 
+		parseLimit(async () => {
+			await analyzeDemo({
+				demoPath: demo.path + '/' + demo.name,
+				outputFolderPath: './out',
+				format: ExportFormat.JSON,
+				source: DemoSource.FaceIt,
+				analyzePositions: false,
+				minify: true,
+				onStderr: console.error,
+				onStdout: console.log,
+				onStart: () => {
+				  console.log('Starting!');
+				},
+				onEnd: () => {
+				  console.log('Done!');
+				},
+			  });
 			progress++;
 			console.info(`Completed Analysis ${demo.name}, ${progress}/${demoPromises.length}`)
 		}

@@ -24,13 +24,14 @@ export const unzipFiles = async () => {
 	const zipFiles = await keepCompleteFiles(files.filter((file: any) => file.endsWith(".zip")));
 
 	let progressCounter = 0;
-	return zipFiles.map( async (file: any, index: number) => {
+	const zipPromises = zipFiles.map( async (file: any, index: number) => {
 		return await unZipLimit(() => unzipFile(config.downloadPath + file))
 			.then( () => { 
 				progressCounter++; 
-				console.info(`${progressCounter}/ ${zipFiles.length}`)
+				console.info(`File Unzip progress ${progressCounter}/ ${zipFiles.length}`)
 			});
 	});
+	return Promise.all(zipPromises);
 }
 
 export const unzipFile = async (filePath: string) => {
@@ -52,8 +53,8 @@ export const unzipFile = async (filePath: string) => {
 
 		const file = await fsPromises.readFile(fullPath, "binary");
 
-		JSZip.loadAsync(file).then((zip) => {
-			console.info(`Zip Contents:`, Object.keys(zip.files).map(k => k));
+		await JSZip.loadAsync(file).then((zip) => {
+			//console.info(`Zip Contents:`, Object.keys(zip.files).map(k => k));
 
 			zip
 				.file(Object.keys(zip.files)[0])!

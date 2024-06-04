@@ -129,11 +129,6 @@ export const readCSVs = async () => {
 
 }
 
-const mergeObjectSumation = (obj1: Record<string, number>, obj2: Record<string, number>) => {
-	return Object.keys(obj1).map( (key) => {
-		obj1[key] += obj2[key];
-	});
-}
 
 function combineBySummingKeys(objA: Record<string, number>, objB: Record<string, number>) { 
 	const mergedObj = {}; 
@@ -152,23 +147,46 @@ function combineBySummingKeys(objA: Record<string, number>, objB: Record<string,
   }
 
 export const readJsons = async () => {
+
+	const calculated: { 
+		name: any; 
+		crosshairShareCode: "", 
+		chickens: Record<string,number>,
+		durationAverages: Record<string,number>,
+		averages: Record<string,number>;
+		trackedObj: Record<string, number>; 
+		weaponKills: Record<string, number>; 
+		weaponKillSubTypes: Record<string, number>; 
+		hitboxTags: Record<string, number>; 
+	}[] = [];
+
 	const files = await fsPromises.readdir(`out`, { withFileTypes: true });
-	const dataFromFiles = await Promise.all(files.map(async (file) => {
-		const data = await fsPromises.readFile(`out/${file.name}`, "utf8");
-		return JSON.parse(data);
-	}));
+	const dataFromFiles = []
+	for (const file of files){
+		const fileData = fs.readFileSync(`out/${file.name}`, "utf8");
+		dataFromFiles.push(JSON.parse(fileData));
+	}
 
-	const calculated: { name: any; crosshairShareCode: "", chickens: Record<string,number>, trackedObj: Record<string, number>; weaponKills: Record<string, number>; weaponKillSubTypes: Record<string, number>; hitboxTags: Record<string, number>; }[] = [];
-
-	dataFromFiles.forEach( (json: any) => {
+	dataFromFiles.forEach( json => {
 		const players = json.players as any;
 		const kills: Record<string, unknown>[] = json.kills as any;
 		const bombsPlanted: Record<string, unknown>[] = json.bombsPlanted as any;
 		const bombsDefused: Record<string, unknown>[] = json.bombsDefused as any;
+		const playersFlashed: Record<string, unknown>[] = json.playersFlashed as any;
 		const damages: Record<string, unknown>[] = json.damages as any;
-		//console.info( players.map( (p: { name: any; }) => p.name ) );
 
 		Object.values(players as any).forEach( (player: any) => {
+			const analytiSkill: Record<string, number> = {
+				openDuel: 0,
+				trading: 0,
+				assists: 0,
+				retakes: 0,
+				afterplant: 0,
+				clutching: 0,
+				midround: 0,
+				saving: 0,
+				util: 0,
+			}
 			const trackedObj: Record<string, number> = {
 				//weaponInspects: player.inspectWeaponCount,
 				noScopesKills: 0,
@@ -181,8 +199,28 @@ export const readJsons = async () => {
 				bombsDefused: 0,
 				diedToBomb: 0,
 				ninjaDefuses: 0,
+				teamKills: 0,
+				selfKills: 0,
+				movingWhileInaccurate: 0,
 				mvpCount: player.mvpCount,
 			};
+			const averages: Record<string,number> = {
+				pistolRoundKillAverageCt: 0,
+				pistolRoundKillAverageT: 0,
+			}
+			const durations: Record<string,number[]> = {
+				selfFlashDurations: [],
+				teamFlashDurations: [],
+				enemyFlashDurations: [],
+			}
+			const econ = {
+				pistolRoundWinPercentage: 0,
+				ecoBuyRoundWinPercentage: 0,
+				halfBuyRoundWinPercentage: 0,
+				fullBuyRoundWinPercentage: 0,
+				buysHelmetOnCtAgainstFullBuyTRounds: 0,
+				buysDefuserOnCtSidePercentage: 0,
+			}
 			const chickens = {
 				"killed": 0,
 				"roasted": 0,
@@ -236,10 +274,34 @@ export const readJsons = async () => {
 					if( kill.is_killer_airborne ) {
 						trackedObj.airborneKills += 1;
 					}
+					if( kill.killerSide === kill.victimSide && kill.killerSteamId !== kill.victimSteamId){
+						trackedObj.teamKills += 1;
+					}
+					if( kill.killerSteamId === kill.victimSteamId && !kill.weaponType.includes('world')){
+						trackedObj.selfKills +=1;
+					}
+
+					if( kill.roundNumber === 1 || kill.roundNumber === 13){
+						kill.killerSide === 2
+							? averages.pistolRoundKillAverageT += 1
+							: averages.pistolRoundKillAverageCt += 1; 
+					}
 				}
 
 				if( kill.victimSteamId === player.steamId && kill.weaponName === "C4" ) {
 					trackedObj.diedToBomb += 1;
+				}
+			});
+
+			playersFlashed.forEach( (flash: any) => {
+				if( player.steamId === flash.flasherSteamId){
+					if( flash.flasherSteamId === flash.flashedSteamId){
+						durations.selfFlashDurations.push(flash.duration)
+					} else {
+						flash.flasherSide !== flash.flashedSide ?
+						durations.enemyFlashDurations.push(flash.duration)
+						: durations.teamFlashDurations.push(flash.duration)		
+					}			
 				}
 			});
 
@@ -285,9 +347,31 @@ export const readJsons = async () => {
 
 			
 			const playerIndex = calculated.findIndex( (p: { name: any; }) => p.name === player.name );
+			
 			if ( playerIndex === -1 ) {
-				calculated.push({ name: player.name, crosshairShareCode: player.crosshairShareCode, chickens, trackedObj, weaponKills, weaponKillSubTypes, hitboxTags});
+
+				const durationAverages = {
+					selfFlashDurationAverage: durations.selfFlashDurations.reduce((sum, item) => sum + item,0) / durations.selfFlashDurations.length || 0,
+					teamFlashDurationAverage: durations.teamFlashDurations.reduce((sum,item) => sum + item,0) / durations.teamFlashDurations.length || 0,
+					enemyFlashDurationAverage: durations.enemyFlashDurations.reduce((sum,item) => sum + item,0) / durations.enemyFlashDurations.length || 0,
+				}
+
+				calculated.push({ name: player.name, crosshairShareCode: player.crosshairShareCode, chickens, averages, durationAverages, trackedObj, weaponKills, weaponKillSubTypes, hitboxTags});
 			} else {
+				durations.selfFlashDurations.push(calculated[playerIndex].durationAverages.selfFlashDurationAverage)
+				durations.teamFlashDurations.push(calculated[playerIndex].durationAverages.teamFlashDurationAverage)
+				durations.enemyFlashDurations.push(calculated[playerIndex].durationAverages.enemyFlashDurationAverage)
+				
+				const durationAverages = {
+					selfFlashDurationAverage: durations.selfFlashDurations.reduce((sum, item) => sum + item,0) / durations.selfFlashDurations.length,
+					teamFlashDurationAverage: durations.teamFlashDurations.reduce((sum,item) => sum + item,0) / durations.teamFlashDurations.length,
+					enemyFlashDurationAverage: durations.enemyFlashDurations.reduce((sum,item) => sum + item,0) / durations.enemyFlashDurations.length,
+				}
+
+
+				calculated[playerIndex].durationAverages = durationAverages;
+				calculated[playerIndex].averages.pistolRoundKillAverageCt = (calculated[playerIndex].averages.pistolRoundKillAverageCt + averages.pistolRoundKillAverageCt)/2
+				calculated[playerIndex].averages.pistolRoundKillAverageT = (calculated[playerIndex].averages.pistolRoundKillAverageT + averages.pistolRoundKillAverageT)/2
 				calculated[playerIndex].chickens = combineBySummingKeys(calculated[playerIndex].chickens, chickens);
 				calculated[playerIndex].trackedObj = combineBySummingKeys(calculated[playerIndex].trackedObj, trackedObj);
 				calculated[playerIndex].weaponKills = combineBySummingKeys(calculated[playerIndex].weaponKills, weaponKills);

@@ -11,6 +11,7 @@
   "author": "darkstars31@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "@akiver/cs-demo-analyzer": "^1.4.4",
     "@prisma/client": "^5.1.1",
     "@terascope/fetch-github-release": "^0.8.7",
     "axios": "^1.4.0",
