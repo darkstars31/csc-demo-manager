@@ -13,6 +13,18 @@ export const doesFileAlreadyExist = (filePath?: string) => {
 	return fs.existsSync( filePath ?? "" );
 }
 
+const parseDemoUrl = (url: string) => ({
+	season: url.split("/").at(-3),
+	matchDay: url.split("/").at(-2),
+	file: {
+		homeTeam: url.split("/").at(-1)?.split("-")[2],
+		awayTeam: url.split("/").at(-1)?.split("-")[4],
+		matchId: url.split("/").at(-1)?.split("-")[5],
+		map: url.split("/").at(-1)?.split("-")[6],
+		date: url.split("/").at(-1)?.split("-")[7],
+	}
+})
+
 export const downloadFile = async (demoUrl: string, destinationPath: string) => {
 	console.info(`Downloading ... ${demoUrl}`);
 	try {

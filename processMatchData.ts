@@ -162,6 +162,10 @@ export const readJsons = async () => {
 
 	const files = await fsPromises.readdir(`out`, { withFileTypes: true });
 	const dataFromFiles = []
+	const throughMatchDay = files.reduce((acc: number, file: any) => {
+		const matchDay = file.name.split("-")[1].replace("M", "");
+		return +matchDay > acc ? matchDay : acc
+	}, 0);
 	for (const file of files){
 		const fileData = fs.readFileSync(`out/${file.name}`, "utf8");
 		dataFromFiles.push(JSON.parse(fileData));
@@ -381,7 +385,7 @@ export const readJsons = async () => {
 		
 		})
 	});
-	fs.writeFileSync( 'extendedStats.json', JSON.stringify({ extended: calculated}), 'utf8' );
+	fs.writeFileSync( 'compiledStats/extendedStats.json', JSON.stringify({ extended: calculated, matchDays: Number(throughMatchDay), timestamp: (new Date()).toISOString()}), 'utf8' );
 	//console.info( 'calcd', calculated );
 }
 

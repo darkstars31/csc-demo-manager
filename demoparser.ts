@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 import pLimit from "p-limit";
 
 const promiseExec = promisify(exec);
-const parseLimit = pLimit(6);
+const parseLimit = pLimit(8);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -50,34 +50,14 @@ export const moveDemosAndStartParser = async () => {
 	});
 }
 
-export const processDemosThroughAnalyzerFork = async () => {
-	console.info("Starting Demo Analyzer");
-	const demos = (await fsPromises.readdir(`${config.downloadPath}unzipped`, { withFileTypes: true })).filter( demo => demo.name.endsWith(".dem") );
-	console.info("Demos Found: ", demos.length);
-	let progress = 0;
-	const demoPromises = demos.map(async (demo: any) => 
-		parseLimit(async () => {
-			const { stderr } = await promiseExec(`csda.exe -demo-path ${demo.path}/${demo.name} -format json -output ../out -source faceit -minify`, { cwd: `${__dirname}/bin/` })
-			if (stderr) {
-				console.error(`Error with stats parser\n ${stderr}`);
-				console.error(stderr);
-				return;
-			}
-			progress++;
-			console.info(`Completed Analysis ${demo.name}, ${progress}/${demoPromises.length}`)
-		}
-		));
-	
-	await Promise.all(demoPromises).then(() => {
-		console.info("Done!");
-	});
-}
-
 export const processDemosThroughAnalyzer = async () => {
 	console.info("Starting Demo Analyzer");
 	const demos = (await fsPromises.readdir(`${config.downloadPath}unzipped`, { withFileTypes: true })).filter( demo => demo.name.endsWith(".dem") );
 	console.info("Demos Found: ", demos.length);
 	let progress = 0;
+
+	const errors: { name: any; error: string; }[] = [];
+
 	const demoPromises = demos.map(async (demo: any) => 
 		parseLimit(async () => {
 			await analyzeDemo({
@@ -87,13 +67,20 @@ export const processDemosThroughAnalyzer = async () => {
 				source: DemoSource.FaceIt,
 				analyzePositions: false,
 				minify: true,
-				onStderr: console.error,
+				onStderr: (err) => {
+					errors.push({
+						name: demo.name,
+						error: err
+					});
+					console.warn(err)
+				},
 				onStdout: console.log,
 				onStart: () => {
-				  console.log('Starting!');
+				  console.log(`Starting ${demo.name}`);
 				},
 				onEnd: () => {
-				  console.log('Done!');
+				  console.log(`Finished ${demo.name}`);
+				  fs.unlinkSync(demo.path + '/' + demo.name);
 				},
 			  });
 			progress++;
@@ -101,7 +88,10 @@ export const processDemosThroughAnalyzer = async () => {
 		}
 		));
 	
-	await Promise.all(demoPromises).then(() => {
+	await Promise.allSettled(demoPromises).then(() => {
+		if(errors.length > 0) {
+			console.error("Errors: ", JSON.stringify(errors));
+		}
 		console.info("Done!");
 	});
 }
