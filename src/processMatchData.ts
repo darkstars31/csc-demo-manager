@@ -432,13 +432,15 @@ export const readJsons = async () => {
 		
 		})
 	});
-	await prisma.extendedStats.create({
-		data: {
-			matchType: 'Combine',
-			season: 15,
-			data: calculated
-		}
-	});
+	if( matchesAdded > 0 ) {
+		await prisma.extendedStats.create({
+			data: {
+				matchType: 'Combine',
+				season: 15,
+				data: calculated
+			}
+		});
+	}
 
 	console.info( `\nFinished Processing Match Data.\n\t Added: ${matchesAdded} \n\t Pre-Existing: ${matchesSkipped}` );
 }

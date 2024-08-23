@@ -69,7 +69,8 @@ export const downloadFiles = async (filesToProcess: any[]) => {
 		});
 
 	const results = await Promise.all(promisesList);
-	logger.info(` Successful: ${results.filter(result => result === 1).length} Errors: ${results.filter(result => result === 0).length}`);
+	logger.info(`\n`);
+	logger.info(`Successful: ${results.filter(result => result === 1).length} Errors: ${results.filter(result => result === 0).length}`);
 	return results;
 }
 

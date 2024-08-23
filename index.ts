@@ -12,6 +12,11 @@ console.info(args);
 export const main = async () => {
 	console.time("execution time");
 
+	if( !args[0] || args[0] === "" ) {
+		console.error(`No args provided, please provide s3 bucket path for demos. (Example 's15/M01')`);
+		process.exit(1);
+	}
+
 	await downloadDemoAnalyzerCLI();
 
 	await downloadDemos();

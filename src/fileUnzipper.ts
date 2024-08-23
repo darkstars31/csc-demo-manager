@@ -36,7 +36,9 @@ export const unzipFiles = async () => {
 			});
 	});
 	const results = await Promise.allSettled(zipPromises);
-	console.info(`File Unzip failures:`, failures);
+	if( failures.length > 0 ) {
+		console.info(`File Unzip failures:`, failures);
+	}
 
 	return results;
 }

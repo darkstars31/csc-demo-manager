@@ -50,7 +50,7 @@ export const moveDemosAndStartParser = async () => {
 
 export const processDemosThroughAnalyzer = async () => {
 	const demos = (await fsPromises.readdir(`${config.downloadPath}unzipped`, { withFileTypes: true })).filter( demo => demo.name.endsWith(".dem") );
-	console.info("Starting Demo Analyzer, Found: ", demos.length);
+	console.info(`Starting Demo Analyzer, Found: ${demos.length} `);
 	let demosAnalyized = 0;
 
 	const errors: { name: any; error: string; }[] = [];
@@ -88,7 +88,7 @@ export const processDemosThroughAnalyzer = async () => {
 		if(errors.length > 0) {
 			console.error("Errors: ", JSON.stringify(errors));
 		}
-		console.info("Finished Parsing!");
+		console.info( demos.length ? "Finished Parsing!" : "Nothing to parse, moving to Processing..");
 	});
 }
  

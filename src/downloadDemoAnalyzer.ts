@@ -33,7 +33,7 @@ export const downloadDemoAnalyzerCLI = async () => downloadRelease(
     disableLogging
 )
   .then( result => {
-    console.log('All done!, result: ', result);
+    console.info(`Downloaded Latest Demo Analyzer! Path: ${result}`);
   })
   .catch(function(err) {
     console.error(err.message);

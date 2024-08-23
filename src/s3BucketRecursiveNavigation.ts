@@ -11,7 +11,7 @@ export const recuriveNavigate = async (directory: any, result: any) => {
 
 	const jsonizedResponse = await xml2js.parseStringPromise(data);
 	const discoveredDirectories = jsonizedResponse.ListBucketResult.CommonPrefixes?.map((item: any) => item.Prefix[0]) ?? [];
-	console.info(directory, " => ", discoveredDirectories);
+	process.stdout.write(`\rBucket Scanning ${directory} => ${discoveredDirectories}`);
 	const files = jsonizedResponse.ListBucketResult.Contents?.map((item: any) => item) ?? [];
 
 	if (files.length > 0) {
