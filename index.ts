@@ -1,15 +1,15 @@
-import { downloadDemos } from "./demodownloader.ts"
-import { unzipFiles } from "./fileUnzipper.ts";
-import { moveDemosAndStartParser, processDemosThroughAnalyzer } from "./demoparser.ts";
-import { readCSVs, readJsons } from "./processMatchData.ts";
-import { downloadDemoAnalyzerCLI } from "./downloadDemoAnalyzer.ts";
+import { downloadDemos } from "./src/demodownloader.ts"
+import { unzipFiles } from "./src/fileUnzipper.ts";
+import { moveDemosAndStartParser, processDemosThroughAnalyzer } from "./src/demoparser.ts";
+import { readCSVs, readJsons } from "./src/processMatchData.ts";
+import { downloadDemoAnalyzerCLI } from "./src/downloadDemoAnalyzer.ts";
 
 
 const args = process.argv.slice(2);
 console.info(args);
 
 
-const main = async () => {
+export const main = async () => {
 	console.time("execution time");
 
 	await downloadDemoAnalyzerCLI();
@@ -28,6 +28,5 @@ const main = async () => {
 	console.info("Finished");
 
 };
-
 
 main();

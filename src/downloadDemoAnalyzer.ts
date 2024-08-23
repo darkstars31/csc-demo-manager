@@ -1,6 +1,6 @@
 
 import { downloadRelease } from '@terascope/fetch-github-release'
-import { config } from "./config.ts";
+import { config } from "../config.ts";
 
 const leaveZipped = false;
 const disableLogging = false;

@@ -7,21 +7,121 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model cscCompiledExtendedStats {
-  id                 Int                 @id @default(autoincrement())
-  createdAt          DateTime            @default(now())
-  season             Int                 @db.Integer
-  throughMatchDay    Int                 @db.Integer
-  extendedStatsJson      Json                @db.JsonB
+model AnalytikillProfile {
+  id          Int      @id @default(autoincrement())
+  cscId       Int
+  name        String   @db.VarChar(255)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+  discordId   String   @unique @db.VarChar(255)
+  discordName String   @db.VarChar(255)
+  lastLogin   DateTime @default(now())
+  profileJson Json
 }
 
-model cscMatchAnalysis {
-  id                    Int                 @id @default(autoincrement())
-  createdAt             DateTime            @default(now())
-  season                Int                 @db.Integer
-  matchDay              Int                 @db.Integer
-  matchId               Int                 @db.Integer
-  tier                  String              @db.VarChar(255)
-  matchAnalysisJson     Json                @db.JsonB
+model Article {
+  id               Int      @id @default(autoincrement())
+  title            String   @db.VarChar(255)
+  subtitle         String   @db.VarChar(255)
+  tags             String[] @db.VarChar(255)
+  content          String
+  anonymous        Boolean  @default(false)
+  approvalState    String   @db.VarChar(255)
+  metadata         String
+  cscPlayerCacheId Int
 }
 
+model CscPlayerCache {
+  id                Int                 @id
+  season            Int
+  dateCreated       DateTime            @default(now())
+  dateUpdated       DateTime            @default(now())
+  steam64Id         String              @unique @db.VarChar(255)
+  LatestName        String              @db.VarChar(255)
+  CscPlayerMMRCache CscPlayerMMRCache[]
+  Names             Names[]
+  TeamAndFranchise  TeamAndFranchise[]
+  Tier              Tier[]
+  Type              Type[]
+}
+
+model CscPlayerMMRCache {
+  id               Int             @id @default(autoincrement())
+  season           Int
+  dateTime         DateTime        @default(now())
+  mmr              Int
+  cscPlayerCacheId Int?
+  CscPlayerCache   CscPlayerCache? @relation(fields: [cscPlayerCacheId], references: [id])
+}
+
+model ExtendedMatches {
+  id        Int      @id @default(autoincrement())
+  matchId   String   @db.VarChar(255)
+  tier      String   @db.VarChar(255)
+  matchDay  Int?
+  map       String   @db.VarChar(255)
+  season    Int
+  matchType String   @db.VarChar(255)
+  data      Json
+  createdAt DateTime @default(now())
+}
+
+model ExtendedStats {
+  id        Int      @id @default(autoincrement())
+  matchType String   @db.VarChar(255)
+  season    Int
+  data      Json
+  createdAt DateTime @default(now())
+}
+
+model FaceitCache {
+  id                      Int      @id @default(autoincrement())
+  steamId                 String   @unique @db.VarChar(255)
+  cscPlayerName           String   @db.VarChar(255)
+  elo                     Int
+  rank                    Int
+  highestRank             Int
+  gamesPlayedLastTwoWeeks Int
+  winrateLastTwoWeeks     Int?
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @default(now())
+  faceitName              String   @db.VarChar(255)
+  faceitIdentifier        String   @db.VarChar(255)
+}
+
+model Names {
+  id               Int             @id @default(autoincrement())
+  name             String          @db.VarChar(255)
+  cscPlayerCacheId Int?
+  dateTime         DateTime        @default(now())
+  CscPlayerCache   CscPlayerCache? @relation(fields: [cscPlayerCacheId], references: [id])
+}
+
+model TeamAndFranchise {
+  id               Int             @id @default(autoincrement())
+  season           Int
+  dateTime         DateTime        @default(now())
+  team             String          @db.VarChar(255)
+  franchise        String          @db.VarChar(255)
+  franchisePrefix  String          @db.VarChar(255)
+  cscPlayerCacheId Int?
+  CscPlayerCache   CscPlayerCache? @relation(fields: [cscPlayerCacheId], references: [id])
+}
+
+model Tier {
+  id               Int             @id @default(autoincrement())
+  season           Int
+  dateTime         DateTime        @default(now())
+  name             String          @db.VarChar(255)
+  cscPlayerCacheId Int?
+  CscPlayerCache   CscPlayerCache? @relation(fields: [cscPlayerCacheId], references: [id])
+}
+
+model Type {
+  id               Int             @id @default(autoincrement())
+  season           Int
+  dateTime         DateTime        @default(now())
+  type             String?         @db.VarChar(255)
+  cscPlayerCacheId Int?
+  CscPlayerCache   CscPlayerCache? @relation(fields: [cscPlayerCacheId], references: [id])
+}

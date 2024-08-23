@@ -1,6 +1,6 @@
 import fs, { promises as fsPromises } from "fs";
 import papa from "papaparse";
-import { prisma } from "./prisma-wrapper.ts";
+import { prisma } from "../prisma-wrapper.ts";
 import path, { dirname } from "path";
 import { fileURLToPath } from 'url';
 import { v4 as uuidv4 } from 'uuid';
@@ -148,6 +148,10 @@ function combineBySummingKeys(objA: Record<string, number>, objB: Record<string,
 
 export const readJsons = async () => {
 
+	const existingMatchIds = await prisma.extendedMatches.findMany({ select: { matchId: true }});
+	let matchesAdded = 0;
+	let matchesSkipped = 0;
+
 	const calculated: { 
 		name: any; 
 		crosshairShareCode: "", 
@@ -168,10 +172,53 @@ export const readJsons = async () => {
 	}, 0);
 	for (const file of files){
 		const fileData = fs.readFileSync(`out/${file.name}`, "utf8");
-		dataFromFiles.push(JSON.parse(fileData));
-	}
+		const jsonFileData = JSON.parse( fileData );
+		const copy = { ...jsonFileData };
+		const { 
+			grenadeBounces, 
+			grenadeProjectilesDestroy,
+			heGrenadesExplode,
+			flashbangsExplode,
+			hostagePickUpStart,
+			hostagePickedUp,
+			hostageRescued,
+			hostagePositions,
+			infernoPositions,
+			demoFilePath,
+			smokesStart, 
+			decoysStart,
+			shots,
+			damages,
+			...rest
+		} = copy;
 
-	dataFromFiles.forEach( json => {
+		const matchType = file.name.split("-")[0].includes("combine") ? "Combine" : "Regulation";
+		const matchId = file.name.split("-")[matchType.includes("Combine") ? 2 : 5].replace("mid", "");
+		const tier = matchType.includes("Combine") ? file.name.split("-")[1] : 'unknown';
+		const map = file.name.split("-")[matchType.includes("Combine") ? 3 : 6].replace("0_de_", "");
+
+		if( !existingMatchIds.some(match => match.matchId === matchId) ) {
+			await prisma.extendedMatches.create({
+				data: {
+					matchId: matchId,
+					tier: tier,
+					map: map,
+					matchDay: matchType === "Regulation" ? +file.name.split("-")[1].replace("M", "") : null,
+					season: 15, //+file.name.split("-")[0].replace("s", ""),
+					matchType: matchType,
+					data: { ...rest }
+				}
+			})
+			matchesAdded++;
+		} else {
+			matchesSkipped++;
+		}
+		process.stdout.write(`\rProcessing Individual Matches ${(matchesAdded+matchesSkipped/files.length*100).toFixed(2)}%`);
+		dataFromFiles.push(jsonFileData);
+	}
+	process.stdout.write('\n')
+	dataFromFiles.forEach( (json, index) => {
+		process.stdout.write(`\rProcessing Extended ${(index/dataFromFiles.length*100).toFixed(2)}%`);
 		const players = json.players as any;
 		const kills: Record<string, unknown>[] = json.kills as any;
 		const bombsPlanted: Record<string, unknown>[] = json.bombsPlanted as any;
@@ -385,9 +432,16 @@ export const readJsons = async () => {
 		
 		})
 	});
-	fs.writeFileSync( 'compiledStats/extendedStats.json', JSON.stringify({ extended: calculated, matchDays: Number(throughMatchDay), timestamp: (new Date()).toISOString()}), 'utf8' );
-	//console.info( 'calcd', calculated );
+	await prisma.extendedStats.create({
+		data: {
+			matchType: 'Combine',
+			season: 15,
+			data: calculated
+		}
+	});
+
+	console.info( `\nFinished Processing Match Data.\n\t Added: ${matchesAdded} \n\t Pre-Existing: ${matchesSkipped}` );
 }
 
 //readCSVs();
-readJsons();
+//readJsons();

@@ -1,6 +1,6 @@
 import axios from "axios";
 import xml2js from "xml2js"
-import { config } from "./config.ts";
+import { config } from "../config.ts";
 import pLimit from "p-limit";
 
 const directoryTraversalLimit = pLimit(1);

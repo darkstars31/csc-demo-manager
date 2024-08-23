@@ -2,10 +2,9 @@ import fs, { promises as fsPromises } from "fs";
 import path, { dirname } from "path";
 import { exec } from 'child_process';
 import { promisify } from 'util';
-import papa from "papaparse";
-import { prisma } from "./prisma-wrapper.ts"
-import { config } from "./config.ts"
+import { config } from "../config.ts"
 import { analyzeDemo, DemoSource, ExportFormat } from '@akiver/cs-demo-analyzer';
+import { progress } from "./progressUtils.ts";
 
 import { fileURLToPath } from 'url';
 import pLimit from "p-limit";
@@ -34,7 +33,6 @@ export const copyDir = async (src: string, dest: string) => {
 
 export const moveDemosAndStartParser = async () => {
 	console.info("Moving Demo Files to DemoScrape In directory..");
-	//await copyDir(`${config.downloadPath}/unzipped`, `${__dirname}/demoScrape2/in`);
 
 	console.info("Starting Demo parser");
 	return new Promise((resolve, reject) => {
@@ -51,10 +49,9 @@ export const moveDemosAndStartParser = async () => {
 }
 
 export const processDemosThroughAnalyzer = async () => {
-	console.info("Starting Demo Analyzer");
 	const demos = (await fsPromises.readdir(`${config.downloadPath}unzipped`, { withFileTypes: true })).filter( demo => demo.name.endsWith(".dem") );
-	console.info("Demos Found: ", demos.length);
-	let progress = 0;
+	console.info("Starting Demo Analyzer, Found: ", demos.length);
+	let demosAnalyized = 0;
 
 	const errors: { name: any; error: string; }[] = [];
 
@@ -74,17 +71,16 @@ export const processDemosThroughAnalyzer = async () => {
 					});
 					console.warn(err)
 				},
-				onStdout: console.log,
+				//onStdout: console.log,
 				onStart: () => {
-				  console.log(`Starting ${demo.name}`);
+					progress(`Starting ${demo.name}`,demosAnalyized, demos.length);
 				},
 				onEnd: () => {
-				  console.log(`Finished ${demo.name}`);
 				  fs.unlinkSync(demo.path + '/' + demo.name);
 				},
 			  });
-			progress++;
-			console.info(`Completed Analysis ${demo.name}, ${progress}/${demoPromises.length}`)
+			  demosAnalyized++;
+			  progress(`Completed ${demo.name}`, demosAnalyized, demos.length);
 		}
 		));
 	
@@ -92,7 +88,7 @@ export const processDemosThroughAnalyzer = async () => {
 		if(errors.length > 0) {
 			console.error("Errors: ", JSON.stringify(errors));
 		}
-		console.info("Done!");
+		console.info("Finished Parsing!");
 	});
 }
  

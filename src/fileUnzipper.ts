@@ -1,9 +1,9 @@
 import pLimit from "p-limit";
 import fs, { promises as fsPromises } from "fs";
 import { demoFileIdentification } from "./file-identification-util.ts";
-import JSZip, { file } from "jszip";
 import _7z from "7zip-min"; 
-import { config } from "./config.ts";
+import { config } from "../config.ts";
+import { progress } from "./progressUtils.ts";
 
 const unZipLimit = pLimit(6);
 
@@ -28,8 +28,8 @@ export const unzipFiles = async () => {
 	const zipPromises = zipFiles.map( async (file: any, index: number) => {
 		return await unZipLimit(() => unzipFile(config.downloadPath + file))
 			.then( () => { 
-				progressCounter++; 
-				console.info(`File Unzip progress ${progressCounter}/${zipFiles.length}`)
+				progressCounter++;
+				progress('File Unzip progress', progressCounter, zipFiles.length);
 			})
 			.catch( (err: any) => {
 				failures.push(file);
@@ -55,7 +55,7 @@ export const unzipFile = async (filePath: string) => {
 		}
 
 		try {
-			console.info(`Unzipping ${fullPath}`);
+			console.info(`Unzipping ${fullPath.split("/").at(-1)}`);
 		} catch (error) {
 			console.info(`Error: ${error}`);
 		}
@@ -65,8 +65,10 @@ export const unzipFile = async (filePath: string) => {
 				console.info(`Failed to unpack ${fileName} w/ error: ${err}`);
 				reject(0);
 			}
-			fs.rename(`${config.downloadPath}/unzipped/demos/${fileName}`, `${config.downloadPath}/unzipped/${fileName}`, (err) => {
-				if (err) console.warn("Error renaming file: ", err);
+			const basePath = `${config.downloadPath}/unzipped`;
+			const newFileName = fileName?.replace(".zip", "")
+			fs.rename(`${basePath}/demos/${newFileName}`, `${basePath}/${newFileName}`, (err) => {
+				if (err) console.warn(`Error renaming file ${newFileName} : `, err);
 			});
 			fs.unlinkSync(fullPath);
 			resolve(1);

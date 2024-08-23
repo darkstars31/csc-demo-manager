@@ -1,5 +1,5 @@
 import { config } from "./config";
-import { downloadFile } from "./demodownloader";
+import { downloadFile } from "./src/demodownloader";
 import { promisifiedRecursiveNavigate } from "./s3BucketRecursiveNavigation";
 import pLimit from "p-limit";
 

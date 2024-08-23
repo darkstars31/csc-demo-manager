@@ -1,10 +1,11 @@
 import fs from "fs";
-import { config } from "./config.ts";
+import { config } from "../config.ts";
 import { promisifiedRecursiveNavigate } from "./s3BucketRecursiveNavigation.ts";
-import { logger } from "./logger.ts";
+import { logger } from "../logger.ts";
 import axios from "axios";
-import { demoHistoryDB } from "./lowdb-wrapper.ts";
+import { demoHistoryDB } from "../lowdb-wrapper.ts";
 import pLimit from "p-limit";
+import { progress } from "./progressUtils.ts";
 
 const args = process.argv.slice(2);
 const fileDownLoadlimit = pLimit(8);
@@ -26,7 +27,7 @@ const parseDemoUrl = (url: string) => ({
 })
 
 export const downloadFile = async (demoUrl: string, destinationPath: string) => {
-	console.info(`Downloading ... ${demoUrl}`);
+	console.info(`Downloading ... ${demoUrl.split("/").at(-1)}`);
 	try {
 		const response = await axios.get(config.url + demoUrl, { responseType: 'stream', headers: { "accept-encoding": "gzip, deflate, br" } });
 		const writer = fs.createWriteStream(destinationPath + `${demoUrl.split("/").at(-1)}`);
@@ -58,7 +59,13 @@ export const downloadFiles = async (filesToProcess: any[]) => {
         .filter(file => !demoHistoryDB.data.find( (history: { fileName: any; }) => history.fileName === file.Key[0]))
 		.map((file: any, index: number) => {
 			const demoUrl = file.Key[0];
-			return fileDownLoadlimit(() => downloadFile(demoUrl, config.downloadPath).then( () => { downloadProgress++; console.info(`${downloadProgress}/${promisesList.length}`)}));
+			return fileDownLoadlimit(() => 
+					downloadFile(demoUrl, config.downloadPath
+				).then( () => { 
+					downloadProgress++; 
+					progress("Downloading Demos", downloadProgress, filesToProcess.length);
+				}
+			));
 		});
 
 	const results = await Promise.all(promisesList);
