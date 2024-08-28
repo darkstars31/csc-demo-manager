@@ -70,7 +70,7 @@ export const unzipFile = async (filePath: string) => {
 			const basePath = `${config.downloadPath}/unzipped`;
 			const newFileName = fileName?.replace(".zip", "")
 			fs.rename(`${basePath}/demos/${newFileName}`, `${basePath}/${newFileName}`, (err) => {
-				if (err) console.warn(`Error renaming file ${newFileName} : `, err);
+				if (err) console.warn(`Error moving file /demos/${newFileName} : `, err);
 			});
 			fs.unlinkSync(fullPath);
 			resolve(1);

@@ -4,10 +4,14 @@ import { prisma } from "../prisma-wrapper.ts";
 import path, { dirname } from "path";
 import { fileURLToPath } from 'url';
 import { v4 as uuidv4 } from 'uuid';
+import { CSDemoAnalysisOutput } from "../types/csdm-output.ts";
+import { fetchCachedCscPlayerStats } from "../dao/cscPlayerStatsDao.ts";
+import { CscStats } from "../types/cscPlayerTierStats.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+const currentSeason = 15
 
 export const readCSVs = async () => {
 	const files = fs.readdirSync(`${__dirname}/demoScrape2/out`);
@@ -148,9 +152,8 @@ function combineBySummingKeys(objA: Record<string, number>, objB: Record<string,
 
 export const readJsons = async () => {
 
-	const existingMatchIds = await prisma.extendedMatches.findMany({ select: { matchId: true }});
-	let matchesAdded = 0;
-	let matchesSkipped = 0;
+	const existingMatchIds = (await prisma.extendedMatches.findMany({ select: { matchId: true }})).map(m => m.matchId);
+	const faceitPlayerData = (await prisma.faceitCache.findMany({ select: { steamId: true, elo: true }}));
 
 	const calculated: { 
 		name: any; 
@@ -164,15 +167,31 @@ export const readJsons = async () => {
 		hitboxTags: Record<string, number>; 
 	}[] = [];
 
+	const cscPlayerStatsByTier: Record<string, CscStats[]> = {
+		recruit: await fetchCachedCscPlayerStats("Recruit", currentSeason, "Combine"),
+		prospect: await fetchCachedCscPlayerStats("Prospect", currentSeason, "Combine"),
+		contender: await fetchCachedCscPlayerStats("Contender", currentSeason, "Combine"),
+		challenger: await fetchCachedCscPlayerStats("Challenger", currentSeason, "Combine"),
+		elite: await fetchCachedCscPlayerStats("Elite", currentSeason, "Combine"),
+		premier: await fetchCachedCscPlayerStats("Premier", currentSeason, "Combine"),
+	}
+
 	const files = await fsPromises.readdir(`out`, { withFileTypes: true });
+	const newMatchFiles = files.filter( file => {
+		const matchType = file.name.split("-")[0].includes("combine") ? "Combine" : "Regulation";
+		const matchId = file.name.split("-")[matchType.includes("Combine") ? 2 : 5].replace("mid", "")
+		return !existingMatchIds.includes(matchId)
+	})
+	let matchesAdded = 0
+	let matchesSkipped = files.length - newMatchFiles.length;
 	const dataFromFiles = []
-	const throughMatchDay = files.reduce((acc: number, file: any) => {
+	const throughMatchDay = newMatchFiles.reduce((acc: number, file: any) => {
 		const matchDay = file.name.split("-")[1].replace("M", "");
 		return +matchDay > acc ? matchDay : acc
 	}, 0);
-	for (const file of files){
+	for (const file of newMatchFiles){
 		const fileData = fs.readFileSync(`out/${file.name}`, "utf8");
-		const jsonFileData = JSON.parse( fileData );
+		const jsonFileData = JSON.parse( fileData ) as CSDemoAnalysisOutput;
 		const copy = { ...jsonFileData };
 		const { 
 			grenadeBounces, 
@@ -197,22 +216,36 @@ export const readJsons = async () => {
 		const tier = matchType.includes("Combine") ? file.name.split("-")[1] : 'unknown';
 		const map = file.name.split("-")[matchType.includes("Combine") ? 3 : 6].replace("0_de_", "");
 
-		if( !existingMatchIds.some(match => match.matchId === matchId) ) {
-			await prisma.extendedMatches.create({
-				data: {
-					matchId: matchId,
-					tier: tier,
-					map: map,
-					matchDay: matchType === "Regulation" ? +file.name.split("-")[1].replace("M", "") : null,
-					season: 15, //+file.name.split("-")[0].replace("s", ""),
-					matchType: matchType,
-					data: { ...rest }
-				}
-			})
-			matchesAdded++;
-		} else {
-			matchesSkipped++;
-		}
+
+		const teamAPlayers = Object.values(copy.players).filter( player => player.team.letter === copy.teamA.letter);
+		const teamBPlayers = Object.values(copy.players).filter( player => player.team.letter === copy.teamB.letter);
+
+		const teamACSCRatingsAtMatch = teamAPlayers.map( player => cscPlayerStatsByTier[tier]?.filter( (stats: { name: string; }) => stats.name === player.name).at(0)?.rating );
+		const teamAFaceitElo = teamAPlayers.map( player => faceitPlayerData.filter( (stats: { steamId: string; }) => +stats.steamId === player.steamId).at(0)?.elo );
+		const teamBCSCRatingsAtMatch = teamBPlayers.map( player => cscPlayerStatsByTier[tier]?.filter( (stats: { name: string; }) => stats.name === player.name).at(0)?.rating );
+		const teamBFaceitElo = teamBPlayers.map( player => faceitPlayerData.filter( (stats: { steamId: string; }) => +stats.steamId === player.steamId).at(0)?.elo );
+		
+		await prisma.extendedMatches.create({
+			data: {
+				matchId: matchId,
+				tier: tier,
+				map: map,
+				matchDay: matchType === "Regulation" ? +file.name.split("-")[1].replace("M", "") : null,
+				season: currentSeason, //+file.name.split("-")[0].replace("s", ""),
+				matchType: matchType,
+				data: { ...rest as any }, // by-pass the weird type error for jsonb
+				metadata: {
+					matchup: {
+						teamACSCRatingsAtMatch,
+						teamBCSCRatingsAtMatch,
+						teamAFaceitElo,
+						teamBFaceitElo
+					}
+				} as any // by-pass the weird type error for jsonb
+			}
+		})
+		matchesAdded++;
+		
 		process.stdout.write(`\rProcessing Individual Matches ${(matchesAdded+matchesSkipped/files.length*100).toFixed(2)}%`);
 		dataFromFiles.push(jsonFileData);
 	}
@@ -436,8 +469,11 @@ export const readJsons = async () => {
 		await prisma.extendedStats.create({
 			data: {
 				matchType: 'Combine',
-				season: 15,
-				data: calculated
+				season: currentSeason,
+				data: calculated,
+				metadata: {
+					matchesProcesses: matchesSkipped+matchesAdded
+				}
 			}
 		});
 	}

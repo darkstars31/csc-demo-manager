@@ -73,14 +73,24 @@ export const processDemosThroughAnalyzer = async () => {
 				},
 				//onStdout: console.log,
 				onStart: () => {
-					progress(`Starting ${demo.name}`,demosAnalyized, demos.length);
+					progress(`StartedAnalyzing`,demosAnalyized, demos.length, demo.name);
 				},
-				onEnd: () => {
-				  fs.unlinkSync(demo.path + '/' + demo.name);
+				onEnd: ( exitCode: number) => {
+					if( exitCode === 0) {
+						fs.unlinkSync(demo.path + '/' + demo.name);
+					} else {
+						if (!fs.existsSync(config.downloadPath + "/failedToParse")) {
+							console.info(`Creating directory /failedToParse`);
+							fs.mkdirSync(config.downloadPath + "/failedToParse");
+						}
+						fs.rename(`${config.downloadPath}/${demo.name}`, `${config.downloadPath}/failedToParse/${demo.name}`, (err) => {
+							if (err) console.warn(`Error moving file /failedToParse/${demo.name} : `, err);
+						});
+					}
 				},
 			  });
 			  demosAnalyized++;
-			  progress(`Completed ${demo.name}`, demosAnalyized, demos.length);
+			  progress(`Completed Analysis`, demosAnalyized, demos.length, demo.name);
 		}
 		));
 	

@@ -12478,5 +12478,1260 @@
     "fileName": "s15/Combines/08-22/combine-recruit-mid3692-0_de_dust2-2024-08-23_06-08-11.dem.zip",
     "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-22/combine-recruit-mid3692-0_de_dust2-2024-08-23_06-08-11.dem.zip",
     "date": "2024-08-23T13:34:19.443Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3722-0_de_mirage-2024-08-25_01-59-36.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3722-0_de_mirage-2024-08-25_01-59-36.dem.zip",
+    "date": "2024-08-25T02:54:46.795Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3696-0_de_anubis-2024-08-25_01-05-37.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3696-0_de_anubis-2024-08-25_01-05-37.dem.zip",
+    "date": "2024-08-25T02:54:51.724Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3715-0_de_dust2-2024-08-25_01-47-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3715-0_de_dust2-2024-08-25_01-47-25.dem.zip",
+    "date": "2024-08-25T02:55:22.872Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3716-0_de_mirage-2024-08-25_01-48-27.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3716-0_de_mirage-2024-08-25_01-48-27.dem.zip",
+    "date": "2024-08-25T02:55:23.372Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3704-0_de_nuke-2024-08-25_01-10-13.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3704-0_de_nuke-2024-08-25_01-10-13.dem.zip",
+    "date": "2024-08-25T02:55:39.027Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3719-0_de_mirage-2024-08-25_01-49-29.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3719-0_de_mirage-2024-08-25_01-49-29.dem.zip",
+    "date": "2024-08-25T02:55:42.596Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3700-0_de_mirage-2024-08-25_01-08-02.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3700-0_de_mirage-2024-08-25_01-08-02.dem.zip",
+    "date": "2024-08-25T02:55:43.288Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3709-0_de_inferno-2024-08-25_01-22-21.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3709-0_de_inferno-2024-08-25_01-22-21.dem.zip",
+    "date": "2024-08-25T02:55:46.560Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3702-0_de_inferno-2024-08-25_01-09-13.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3702-0_de_inferno-2024-08-25_01-09-13.dem.zip",
+    "date": "2024-08-25T02:56:09.607Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3698-0_de_inferno-2024-08-25_01-05-29.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3698-0_de_inferno-2024-08-25_01-05-29.dem.zip",
+    "date": "2024-08-25T02:56:14.247Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3699-0_de_ancient-2024-08-25_01-07-09.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3699-0_de_ancient-2024-08-25_01-07-09.dem.zip",
+    "date": "2024-08-25T02:56:20.155Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3718-0_de_vertigo-2024-08-25_01-52-10.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3718-0_de_vertigo-2024-08-25_01-52-10.dem.zip",
+    "date": "2024-08-25T02:56:20.827Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3703-0_de_inferno-2024-08-25_01-07-21.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3703-0_de_inferno-2024-08-25_01-07-21.dem.zip",
+    "date": "2024-08-25T02:56:23.631Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3731-0_de_anubis-2024-08-25_02-22-00.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3731-0_de_anubis-2024-08-25_02-22-00.dem.zip",
+    "date": "2024-08-25T02:56:32.032Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3711-0_de_vertigo-2024-08-25_01-33-18.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3711-0_de_vertigo-2024-08-25_01-33-18.dem.zip",
+    "date": "2024-08-25T02:56:35.334Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3708-0_de_anubis-2024-08-25_01-16-57.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3708-0_de_anubis-2024-08-25_01-16-57.dem.zip",
+    "date": "2024-08-25T02:56:37.017Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3724-0_de_vertigo-2024-08-25_02-06-47.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3724-0_de_vertigo-2024-08-25_02-06-47.dem.zip",
+    "date": "2024-08-25T02:56:54.507Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3712-0_de_mirage-2024-08-25_01-37-40.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3712-0_de_mirage-2024-08-25_01-37-40.dem.zip",
+    "date": "2024-08-25T02:56:54.813Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3705-0_de_dust2-2024-08-25_01-10-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3705-0_de_dust2-2024-08-25_01-10-25.dem.zip",
+    "date": "2024-08-25T02:57:04.388Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3717-0_de_nuke-2024-08-25_01-46-34.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3717-0_de_nuke-2024-08-25_01-46-34.dem.zip",
+    "date": "2024-08-25T02:57:10.522Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3713-0_de_nuke-2024-08-25_01-40-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3713-0_de_nuke-2024-08-25_01-40-30.dem.zip",
+    "date": "2024-08-25T02:57:23.897Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3701-0_de_ancient-2024-08-25_01-06-40.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3701-0_de_ancient-2024-08-25_01-06-40.dem.zip",
+    "date": "2024-08-25T02:57:26.541Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3720-0_de_inferno-2024-08-25_01-50-48.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3720-0_de_inferno-2024-08-25_01-50-48.dem.zip",
+    "date": "2024-08-25T02:57:34.461Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3697-0_de_inferno-2024-08-25_01-06-01.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3697-0_de_inferno-2024-08-25_01-06-01.dem.zip",
+    "date": "2024-08-25T02:57:35.224Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3706-0_de_mirage-2024-08-25_01-18-17.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3706-0_de_mirage-2024-08-25_01-18-17.dem.zip",
+    "date": "2024-08-25T02:57:37.877Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3723-0_de_inferno-2024-08-25_02-05-07.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3723-0_de_inferno-2024-08-25_02-05-07.dem.zip",
+    "date": "2024-08-25T02:57:49.278Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3707-0_de_nuke-2024-08-25_01-18-26.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3707-0_de_nuke-2024-08-25_01-18-26.dem.zip",
+    "date": "2024-08-25T02:57:49.303Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3710-0_de_vertigo-2024-08-25_01-28-11.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3710-0_de_vertigo-2024-08-25_01-28-11.dem.zip",
+    "date": "2024-08-25T02:57:52.169Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3729-0_de_ancient-2024-08-25_02-13-12.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3729-0_de_ancient-2024-08-25_02-13-12.dem.zip",
+    "date": "2024-08-25T03:10:01.691Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3732-0_de_mirage-2024-08-25_02-26-22.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3732-0_de_mirage-2024-08-25_02-26-22.dem.zip",
+    "date": "2024-08-25T03:10:17.165Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3733-0_de_nuke-2024-08-25_02-26-27.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3733-0_de_nuke-2024-08-25_02-26-27.dem.zip",
+    "date": "2024-08-25T03:10:25.476Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3734-0_de_dust2-2024-08-25_02-27-39.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3734-0_de_dust2-2024-08-25_02-27-39.dem.zip",
+    "date": "2024-08-25T03:10:30.031Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3730-0_de_dust2-2024-08-25_02-19-52.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3730-0_de_dust2-2024-08-25_02-19-52.dem.zip",
+    "date": "2024-08-25T03:10:34.256Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3726-0_de_inferno-2024-08-25_02-09-59.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3726-0_de_inferno-2024-08-25_02-09-59.dem.zip",
+    "date": "2024-08-25T03:10:35.534Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3735-0_de_mirage-2024-08-25_02-29-10.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3735-0_de_mirage-2024-08-25_02-29-10.dem.zip",
+    "date": "2024-08-25T03:10:38.379Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3728-0_de_nuke-2024-08-25_02-15-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3728-0_de_nuke-2024-08-25_02-15-30.dem.zip",
+    "date": "2024-08-25T03:10:40.785Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3738-0_de_nuke-2024-08-25_02-31-33.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3738-0_de_nuke-2024-08-25_02-31-33.dem.zip",
+    "date": "2024-08-25T03:10:52.057Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3714-0_de_vertigo-2024-08-25_01-48-08.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3714-0_de_vertigo-2024-08-25_01-48-08.dem.zip",
+    "date": "2024-08-25T03:10:53.491Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3736-0_de_vertigo-2024-08-25_02-31-43.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3736-0_de_vertigo-2024-08-25_02-31-43.dem.zip",
+    "date": "2024-08-25T03:14:54.502Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3740-0_de_vertigo-2024-08-25_02-40-40.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3740-0_de_vertigo-2024-08-25_02-40-40.dem.zip",
+    "date": "2024-08-25T03:15:01.427Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3739-0_de_vertigo-2024-08-25_02-35-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3739-0_de_vertigo-2024-08-25_02-35-30.dem.zip",
+    "date": "2024-08-25T03:19:58.215Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3737-0_de_inferno-2024-08-25_02-33-36.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3737-0_de_inferno-2024-08-25_02-33-36.dem.zip",
+    "date": "2024-08-25T03:20:03.440Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3721-0_de_inferno-2024-08-25_01-55-32.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3721-0_de_inferno-2024-08-25_01-55-32.dem.zip",
+    "date": "2024-08-25T03:25:18.107Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3746-0_de_mirage-2024-08-25_03-03-24.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3746-0_de_mirage-2024-08-25_03-03-24.dem.zip",
+    "date": "2024-08-25T03:34:51.554Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3741-0_de_nuke-2024-08-25_02-49-22.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3741-0_de_nuke-2024-08-25_02-49-22.dem.zip",
+    "date": "2024-08-25T03:35:05.783Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3749-0_de_dust2-2024-08-25_03-07-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3749-0_de_dust2-2024-08-25_03-07-30.dem.zip",
+    "date": "2024-08-25T03:39:54.296Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3747-0_de_ancient-2024-08-25_03-06-13.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3747-0_de_ancient-2024-08-25_03-06-13.dem.zip",
+    "date": "2024-08-25T03:40:00.547Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3742-0_de_inferno-2024-08-25_02-54-33.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3742-0_de_inferno-2024-08-25_02-54-33.dem.zip",
+    "date": "2024-08-25T03:45:01.808Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3743-0_de_vertigo-2024-08-25_02-59-27.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3743-0_de_vertigo-2024-08-25_02-59-27.dem.zip",
+    "date": "2024-08-25T03:55:07.980Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3745-0_de_mirage-2024-08-25_03-01-33.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3745-0_de_mirage-2024-08-25_03-01-33.dem.zip",
+    "date": "2024-08-25T03:55:12.501Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3748-0_de_mirage-2024-08-25_03-15-20.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3748-0_de_mirage-2024-08-25_03-15-20.dem.zip",
+    "date": "2024-08-25T03:59:56.395Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3751-0_de_nuke-2024-08-25_03-17-10.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3751-0_de_nuke-2024-08-25_03-17-10.dem.zip",
+    "date": "2024-08-25T04:00:09.424Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3754-0_de_vertigo-2024-08-25_03-23-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3754-0_de_vertigo-2024-08-25_03-23-25.dem.zip",
+    "date": "2024-08-25T04:05:09.350Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3753-0_de_anubis-2024-08-25_03-19-41.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3753-0_de_anubis-2024-08-25_03-19-41.dem.zip",
+    "date": "2024-08-25T04:05:17.242Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3750-0_de_anubis-2024-08-25_03-08-21.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3750-0_de_anubis-2024-08-25_03-08-21.dem.zip",
+    "date": "2024-08-25T04:05:20.138Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3755-0_de_vertigo-2024-08-25_03-22-55.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3755-0_de_vertigo-2024-08-25_03-22-55.dem.zip",
+    "date": "2024-08-25T04:05:25.479Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3744-0_de_ancient-2024-08-25_02-58-53.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3744-0_de_ancient-2024-08-25_02-58-53.dem.zip",
+    "date": "2024-08-25T04:05:44.029Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3757-0_de_dust2-2024-08-25_03-37-15.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3757-0_de_dust2-2024-08-25_03-37-15.dem.zip",
+    "date": "2024-08-25T04:14:53.304Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3758-0_de_dust2-2024-08-25_03-40-02.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3758-0_de_dust2-2024-08-25_03-40-02.dem.zip",
+    "date": "2024-08-25T04:19:52.977Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3760-0_de_ancient-2024-08-25_03-47-07.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3760-0_de_ancient-2024-08-25_03-47-07.dem.zip",
+    "date": "2024-08-25T04:25:03.823Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3759-0_de_vertigo-2024-08-25_03-40-18.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3759-0_de_vertigo-2024-08-25_03-40-18.dem.zip",
+    "date": "2024-08-25T04:25:04.870Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3756-0_de_mirage-2024-08-25_03-35-24.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3756-0_de_mirage-2024-08-25_03-35-24.dem.zip",
+    "date": "2024-08-25T04:30:03.211Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3761-0_de_nuke-2024-08-25_03-53-54.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3761-0_de_nuke-2024-08-25_03-53-54.dem.zip",
+    "date": "2024-08-25T04:34:53.717Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3765-0_de_inferno-2024-08-25_04-07-11.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3765-0_de_inferno-2024-08-25_04-07-11.dem.zip",
+    "date": "2024-08-25T04:44:49.922Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3763-0_de_ancient-2024-08-25_04-02-07.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3763-0_de_ancient-2024-08-25_04-02-07.dem.zip",
+    "date": "2024-08-25T04:45:07.991Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3764-0_de_ancient-2024-08-25_04-13-14.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3764-0_de_ancient-2024-08-25_04-13-14.dem.zip",
+    "date": "2024-08-25T04:55:02.449Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3762-0_de_anubis-2024-08-25_04-00-38.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3762-0_de_anubis-2024-08-25_04-00-38.dem.zip",
+    "date": "2024-08-25T04:55:08.454Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3768-0_de_nuke-2024-08-25_04-26-27.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3768-0_de_nuke-2024-08-25_04-26-27.dem.zip",
+    "date": "2024-08-25T05:09:57.241Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3766-0_de_inferno-2024-08-25_04-15-06.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3766-0_de_inferno-2024-08-25_04-15-06.dem.zip",
+    "date": "2024-08-25T05:10:15.241Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3770-0_de_nuke-2024-08-25_04-40-53.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3770-0_de_nuke-2024-08-25_04-40-53.dem.zip",
+    "date": "2024-08-25T05:20:02.065Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3769-0_de_inferno-2024-08-25_04-29-57.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3769-0_de_inferno-2024-08-25_04-29-57.dem.zip",
+    "date": "2024-08-25T05:20:05.020Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-challenger-mid3772-0_de_vertigo-2024-08-25_04-44-11.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-challenger-mid3772-0_de_vertigo-2024-08-25_04-44-11.dem.zip",
+    "date": "2024-08-25T05:20:14.331Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3771-0_de_anubis-2024-08-25_04-41-42.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3771-0_de_anubis-2024-08-25_04-41-42.dem.zip",
+    "date": "2024-08-25T05:29:55.041Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3773-0_de_anubis-2024-08-25_04-45-42.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3773-0_de_anubis-2024-08-25_04-45-42.dem.zip",
+    "date": "2024-08-25T05:30:03.042Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3775-0_de_ancient-2024-08-25_04-58-44.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3775-0_de_ancient-2024-08-25_04-58-44.dem.zip",
+    "date": "2024-08-25T05:40:00.981Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3776-0_de_anubis-2024-08-25_05-07-26.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3776-0_de_anubis-2024-08-25_05-07-26.dem.zip",
+    "date": "2024-08-25T05:40:02.190Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3777-0_de_mirage-2024-08-25_05-10-16.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3777-0_de_mirage-2024-08-25_05-10-16.dem.zip",
+    "date": "2024-08-25T05:44:54.422Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3779-0_de_nuke-2024-08-25_05-18-32.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3779-0_de_nuke-2024-08-25_05-18-32.dem.zip",
+    "date": "2024-08-25T05:54:57.998Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3778-0_de_ancient-2024-08-25_05-13-02.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3778-0_de_ancient-2024-08-25_05-13-02.dem.zip",
+    "date": "2024-08-25T05:59:56.627Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3781-0_de_nuke-2024-08-25_05-36-47.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3781-0_de_nuke-2024-08-25_05-36-47.dem.zip",
+    "date": "2024-08-25T11:55:13.120Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-elite-mid3786-0_de_mirage-2024-08-25_06-28-29.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-elite-mid3786-0_de_mirage-2024-08-25_06-28-29.dem.zip",
+    "date": "2024-08-25T11:55:23.528Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3785-0_de_vertigo-2024-08-25_06-23-32.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3785-0_de_vertigo-2024-08-25_06-23-32.dem.zip",
+    "date": "2024-08-25T11:55:27.876Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3782-0_de_inferno-2024-08-25_05-40-36.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3782-0_de_inferno-2024-08-25_05-40-36.dem.zip",
+    "date": "2024-08-25T11:55:34.208Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3788-0_de_mirage-2024-08-25_06-55-34.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3788-0_de_mirage-2024-08-25_06-55-34.dem.zip",
+    "date": "2024-08-25T11:55:44.992Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3780-0_de_inferno-2024-08-25_05-30-22.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3780-0_de_inferno-2024-08-25_05-30-22.dem.zip",
+    "date": "2024-08-25T11:55:45.129Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-prospect-mid3787-0_de_inferno-2024-08-25_06-29-54.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-prospect-mid3787-0_de_inferno-2024-08-25_06-29-54.dem.zip",
+    "date": "2024-08-25T11:55:48.051Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-contender-mid3783-0_de_ancient-2024-08-25_05-45-00.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-contender-mid3783-0_de_ancient-2024-08-25_05-45-00.dem.zip",
+    "date": "2024-08-25T11:55:50.861Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3784-0_de_anubis-2024-08-25_06-13-26.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3784-0_de_anubis-2024-08-25_06-13-26.dem.zip",
+    "date": "2024-08-25T11:55:52.381Z"
+  },
+  {
+    "fileName": "s15/Combines/08-24/combine-recruit-mid3789-0_de_inferno-2024-08-25_07-00-44.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-24/combine-recruit-mid3789-0_de_inferno-2024-08-25_07-00-44.dem.zip",
+    "date": "2024-08-25T11:55:59.434Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3791-0_de_vertigo-2024-08-27_01-04-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3791-0_de_vertigo-2024-08-27_01-04-30.dem.zip",
+    "date": "2024-08-27T01:55:49.559Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3795-0_de_inferno-2024-08-27_01-08-39.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3795-0_de_inferno-2024-08-27_01-08-39.dem.zip",
+    "date": "2024-08-27T01:56:03.473Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3797-0_de_nuke-2024-08-27_01-07-42.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3797-0_de_nuke-2024-08-27_01-07-42.dem.zip",
+    "date": "2024-08-27T01:56:13.810Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3799-0_de_mirage-2024-08-27_01-11-26.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3799-0_de_mirage-2024-08-27_01-11-26.dem.zip",
+    "date": "2024-08-27T01:56:23.455Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3792-0_de_dust2-2024-08-27_01-08-32.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3792-0_de_dust2-2024-08-27_01-08-32.dem.zip",
+    "date": "2024-08-27T01:56:26.630Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3793-0_de_anubis-2024-08-27_01-05-35.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3793-0_de_anubis-2024-08-27_01-05-35.dem.zip",
+    "date": "2024-08-27T01:56:27.756Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3794-0_de_vertigo-2024-08-27_01-06-00.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3794-0_de_vertigo-2024-08-27_01-06-00.dem.zip",
+    "date": "2024-08-27T01:56:32.110Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3796-0_de_vertigo-2024-08-27_01-08-04.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3796-0_de_vertigo-2024-08-27_01-08-04.dem.zip",
+    "date": "2024-08-27T01:56:33.794Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3798-0_de_vertigo-2024-08-27_01-11-06.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3798-0_de_vertigo-2024-08-27_01-11-06.dem.zip",
+    "date": "2024-08-27T01:56:37.731Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3804-0_de_dust2-2024-08-27_01-21-59.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3804-0_de_dust2-2024-08-27_01-21-59.dem.zip",
+    "date": "2024-08-27T02:00:50.742Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3801-0_de_nuke-2024-08-27_01-12-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3801-0_de_nuke-2024-08-27_01-12-25.dem.zip",
+    "date": "2024-08-27T02:01:02.251Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3800-0_de_inferno-2024-08-27_01-09-12.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3800-0_de_inferno-2024-08-27_01-09-12.dem.zip",
+    "date": "2024-08-27T02:01:12.299Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3805-0_de_inferno-2024-08-27_01-25-15.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3805-0_de_inferno-2024-08-27_01-25-15.dem.zip",
+    "date": "2024-08-27T02:05:52.988Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3803-0_de_inferno-2024-08-27_01-22-20.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3803-0_de_inferno-2024-08-27_01-22-20.dem.zip",
+    "date": "2024-08-27T02:10:57.422Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3809-0_de_mirage-2024-08-27_01-42-40.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3809-0_de_mirage-2024-08-27_01-42-40.dem.zip",
+    "date": "2024-08-27T02:15:47.965Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3807-0_de_vertigo-2024-08-27_01-39-06.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3807-0_de_vertigo-2024-08-27_01-39-06.dem.zip",
+    "date": "2024-08-27T02:20:54.032Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3810-0_de_ancient-2024-08-27_01-45-40.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3810-0_de_ancient-2024-08-27_01-45-40.dem.zip",
+    "date": "2024-08-27T02:21:03.841Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3812-0_de_ancient-2024-08-27_01-48-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3812-0_de_ancient-2024-08-27_01-48-30.dem.zip",
+    "date": "2024-08-27T02:21:06.381Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3790-0_de_dust2-2024-08-27_01-10-18.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3790-0_de_dust2-2024-08-27_01-10-18.dem.zip",
+    "date": "2024-08-27T02:21:17.764Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3811-0_de_inferno-2024-08-27_01-48-40.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3811-0_de_inferno-2024-08-27_01-48-40.dem.zip",
+    "date": "2024-08-27T02:25:51.706Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3814-0_de_nuke-2024-08-27_01-53-22.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3814-0_de_nuke-2024-08-27_01-53-22.dem.zip",
+    "date": "2024-08-27T02:30:49.832Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3806-0_de_vertigo-2024-08-27_01-33-29.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3806-0_de_vertigo-2024-08-27_01-33-29.dem.zip",
+    "date": "2024-08-27T02:31:02.850Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3813-0_de_ancient-2024-08-27_01-52-33.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3813-0_de_ancient-2024-08-27_01-52-33.dem.zip",
+    "date": "2024-08-27T02:35:57.622Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3816-0_de_mirage-2024-08-27_01-56-04.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3816-0_de_mirage-2024-08-27_01-56-04.dem.zip",
+    "date": "2024-08-27T02:36:04.038Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3818-0_de_dust2-2024-08-27_02-02-00.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3818-0_de_dust2-2024-08-27_02-02-00.dem.zip",
+    "date": "2024-08-27T02:40:46.962Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3817-0_de_dust2-2024-08-27_02-04-09.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3817-0_de_dust2-2024-08-27_02-04-09.dem.zip",
+    "date": "2024-08-27T02:45:51.450Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3819-0_de_inferno-2024-08-27_02-01-44.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3819-0_de_inferno-2024-08-27_02-01-44.dem.zip",
+    "date": "2024-08-27T02:45:59.079Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3815-0_de_dust2-2024-08-27_01-55-40.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3815-0_de_dust2-2024-08-27_01-55-40.dem.zip",
+    "date": "2024-08-27T02:51:03.788Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3808-0_de_dust2-2024-08-27_01-43-52.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3808-0_de_dust2-2024-08-27_01-43-52.dem.zip",
+    "date": "2024-08-27T02:51:08.821Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3821-0_de_vertigo-2024-08-27_02-13-56.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3821-0_de_vertigo-2024-08-27_02-13-56.dem.zip",
+    "date": "2024-08-27T02:55:47.044Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3826-0_de_ancient-2024-08-27_02-21-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3826-0_de_ancient-2024-08-27_02-21-30.dem.zip",
+    "date": "2024-08-27T03:00:59.559Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3823-0_de_anubis-2024-08-27_02-16-43.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3823-0_de_anubis-2024-08-27_02-16-43.dem.zip",
+    "date": "2024-08-27T03:01:02.252Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3824-0_de_mirage-2024-08-27_02-19-22.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3824-0_de_mirage-2024-08-27_02-19-22.dem.zip",
+    "date": "2024-08-27T03:01:03.208Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3829-0_de_inferno-2024-08-27_02-27-47.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3829-0_de_inferno-2024-08-27_02-27-47.dem.zip",
+    "date": "2024-08-27T03:05:52.547Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3820-0_de_mirage-2024-08-27_02-06-38.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3820-0_de_mirage-2024-08-27_02-06-38.dem.zip",
+    "date": "2024-08-27T03:06:05.833Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3830-0_de_dust2-2024-08-27_02-28-28.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3830-0_de_dust2-2024-08-27_02-28-28.dem.zip",
+    "date": "2024-08-27T03:06:06.423Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3828-0_de_anubis-2024-08-27_02-23-36.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3828-0_de_anubis-2024-08-27_02-23-36.dem.zip",
+    "date": "2024-08-27T03:10:57.477Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3827-0_de_anubis-2024-08-27_02-21-41.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3827-0_de_anubis-2024-08-27_02-21-41.dem.zip",
+    "date": "2024-08-27T03:11:01.351Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3831-0_de_ancient-2024-08-27_02-33-49.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3831-0_de_ancient-2024-08-27_02-33-49.dem.zip",
+    "date": "2024-08-27T03:11:04.504Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3825-0_de_mirage-2024-08-27_02-20-29.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3825-0_de_mirage-2024-08-27_02-20-29.dem.zip",
+    "date": "2024-08-27T03:11:07.189Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3822-0_de_inferno-2024-08-27_02-23-52.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3822-0_de_inferno-2024-08-27_02-23-52.dem.zip",
+    "date": "2024-08-27T03:15:54.934Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3833-0_de_vertigo-2024-08-27_02-44-48.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3833-0_de_vertigo-2024-08-27_02-44-48.dem.zip",
+    "date": "2024-08-27T03:25:46.053Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3836-0_de_nuke-2024-08-27_02-47-11.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3836-0_de_nuke-2024-08-27_02-47-11.dem.zip",
+    "date": "2024-08-27T03:31:00.650Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3834-0_de_ancient-2024-08-27_02-42-57.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3834-0_de_ancient-2024-08-27_02-42-57.dem.zip",
+    "date": "2024-08-27T03:31:01.291Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3837-0_de_anubis-2024-08-27_02-53-52.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3837-0_de_anubis-2024-08-27_02-53-52.dem.zip",
+    "date": "2024-08-27T03:35:44.260Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3838-0_de_vertigo-2024-08-27_02-55-11.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3838-0_de_vertigo-2024-08-27_02-55-11.dem.zip",
+    "date": "2024-08-27T03:36:01.823Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3835-0_de_dust2-2024-08-27_02-42-14.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3835-0_de_dust2-2024-08-27_02-42-14.dem.zip",
+    "date": "2024-08-27T03:36:03.699Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3841-0_de_ancient-2024-08-27_03-02-22.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3841-0_de_ancient-2024-08-27_03-02-22.dem.zip",
+    "date": "2024-08-27T03:40:58.939Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3832-0_de_ancient-2024-08-27_02-34-47.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3832-0_de_ancient-2024-08-27_02-34-47.dem.zip",
+    "date": "2024-08-27T03:41:00.465Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3840-0_de_ancient-2024-08-27_02-58-13.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3840-0_de_ancient-2024-08-27_02-58-13.dem.zip",
+    "date": "2024-08-27T03:45:53.089Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3842-0_de_vertigo-2024-08-27_03-01-53.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3842-0_de_vertigo-2024-08-27_03-01-53.dem.zip",
+    "date": "2024-08-27T03:50:50.152Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3846-0_de_inferno-2024-08-27_03-15-39.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3846-0_de_inferno-2024-08-27_03-15-39.dem.zip",
+    "date": "2024-08-27T03:56:14.904Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3839-0_de_vertigo-2024-08-27_02-57-45.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3839-0_de_vertigo-2024-08-27_02-57-45.dem.zip",
+    "date": "2024-08-27T03:56:15.269Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3844-0_de_dust2-2024-08-27_03-10-09.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3844-0_de_dust2-2024-08-27_03-10-09.dem.zip",
+    "date": "2024-08-27T03:56:21.352Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3845-0_de_mirage-2024-08-27_03-14-46.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3845-0_de_mirage-2024-08-27_03-14-46.dem.zip",
+    "date": "2024-08-27T03:56:29.863Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3848-0_de_ancient-2024-08-27_03-32-13.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3848-0_de_ancient-2024-08-27_03-32-13.dem.zip",
+    "date": "2024-08-27T04:00:44.123Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3854-0_de_ancient-2024-08-27_03-47-27.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3854-0_de_ancient-2024-08-27_03-47-27.dem.zip",
+    "date": "2024-08-27T13:11:34.901Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3868-0_de_ancient-2024-08-27_05-07-16.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3868-0_de_ancient-2024-08-27_05-07-16.dem.zip",
+    "date": "2024-08-27T13:11:59.065Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3847-0_de_vertigo-2024-08-27_03-34-33.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3847-0_de_vertigo-2024-08-27_03-34-33.dem.zip",
+    "date": "2024-08-27T13:12:05.486Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3856-0_de_inferno-2024-08-27_03-54-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3856-0_de_inferno-2024-08-27_03-54-30.dem.zip",
+    "date": "2024-08-27T13:12:08.543Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3861-0_de_anubis-2024-08-27_04-11-44.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3861-0_de_anubis-2024-08-27_04-11-44.dem.zip",
+    "date": "2024-08-27T13:12:11.674Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3859-0_de_dust2-2024-08-27_03-59-06.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3859-0_de_dust2-2024-08-27_03-59-06.dem.zip",
+    "date": "2024-08-27T13:12:19.285Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3857-0_de_anubis-2024-08-27_03-55-49.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3857-0_de_anubis-2024-08-27_03-55-49.dem.zip",
+    "date": "2024-08-27T13:12:32.295Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-challenger-mid3843-0_de_nuke-2024-08-27_03-07-41.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-challenger-mid3843-0_de_nuke-2024-08-27_03-07-41.dem.zip",
+    "date": "2024-08-27T13:12:40.920Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3851-0_de_nuke-2024-08-27_03-40-44.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3851-0_de_nuke-2024-08-27_03-40-44.dem.zip",
+    "date": "2024-08-27T13:13:00.293Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3870-0_de_nuke-2024-08-27_05-11-36.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3870-0_de_nuke-2024-08-27_05-11-36.dem.zip",
+    "date": "2024-08-27T13:13:02.629Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3875-0_de_anubis-2024-08-27_06-18-57.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3875-0_de_anubis-2024-08-27_06-18-57.dem.zip",
+    "date": "2024-08-27T13:13:12.348Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3858-0_de_ancient-2024-08-27_03-58-48.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3858-0_de_ancient-2024-08-27_03-58-48.dem.zip",
+    "date": "2024-08-27T13:13:15.715Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-elite-mid3869-0_de_ancient-2024-08-27_05-08-57.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-elite-mid3869-0_de_ancient-2024-08-27_05-08-57.dem.zip",
+    "date": "2024-08-27T13:13:23.090Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-contender-mid3865-0_de_inferno-2024-08-27_04-40-32.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-contender-mid3865-0_de_inferno-2024-08-27_04-40-32.dem.zip",
+    "date": "2024-08-27T13:13:24.731Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3872-0_de_nuke-2024-08-27_05-26-53.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3872-0_de_nuke-2024-08-27_05-26-53.dem.zip",
+    "date": "2024-08-27T13:13:31.023Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3866-0_de_ancient-2024-08-27_04-43-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3866-0_de_ancient-2024-08-27_04-43-25.dem.zip",
+    "date": "2024-08-27T13:13:33.470Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3860-0_de_dust2-2024-08-27_04-07-43.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3860-0_de_dust2-2024-08-27_04-07-43.dem.zip",
+    "date": "2024-08-27T13:13:43.795Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3853-0_de_vertigo-2024-08-27_03-44-31.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3853-0_de_vertigo-2024-08-27_03-44-31.dem.zip",
+    "date": "2024-08-27T13:13:54.096Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-prospect-mid3876-0_de_anubis-2024-08-27_06-21-00.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-prospect-mid3876-0_de_anubis-2024-08-27_06-21-00.dem.zip",
+    "date": "2024-08-27T13:13:54.382Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3871-0_de_mirage-2024-08-27_05-14-29.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3871-0_de_mirage-2024-08-27_05-14-29.dem.zip",
+    "date": "2024-08-27T13:14:09.979Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3855-0_de_anubis-2024-08-27_03-51-27.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3855-0_de_anubis-2024-08-27_03-51-27.dem.zip",
+    "date": "2024-08-27T13:14:11.476Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3863-0_de_nuke-2024-08-27_04-33-43.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3863-0_de_nuke-2024-08-27_04-33-43.dem.zip",
+    "date": "2024-08-27T13:14:15.762Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3850-0_de_mirage-2024-08-27_03-38-52.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3850-0_de_mirage-2024-08-27_03-38-52.dem.zip",
+    "date": "2024-08-27T13:14:17.105Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3873-0_de_vertigo-2024-08-27_05-54-42.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3873-0_de_vertigo-2024-08-27_05-54-42.dem.zip",
+    "date": "2024-08-27T13:14:21.089Z"
+  },
+  {
+    "fileName": "s15/Combines/08-26/combine-recruit-mid3862-0_de_vertigo-2024-08-27_04-31-28.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-26/combine-recruit-mid3862-0_de_vertigo-2024-08-27_04-31-28.dem.zip",
+    "date": "2024-08-27T13:14:21.096Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3882-0_de_dust2-2024-08-28_01-07-57.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3882-0_de_dust2-2024-08-28_01-07-57.dem.zip",
+    "date": "2024-08-28T01:43:57.372Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3877-0_de_vertigo-2024-08-28_01-04-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3877-0_de_vertigo-2024-08-28_01-04-30.dem.zip",
+    "date": "2024-08-28T01:49:21.428Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3886-0_de_nuke-2024-08-28_01-07-50.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3886-0_de_nuke-2024-08-28_01-07-50.dem.zip",
+    "date": "2024-08-28T01:49:26.519Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3885-0_de_vertigo-2024-08-28_01-07-05.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3885-0_de_vertigo-2024-08-28_01-07-05.dem.zip",
+    "date": "2024-08-28T01:49:26.584Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3888-0_de_dust2-2024-08-28_01-13-47.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3888-0_de_dust2-2024-08-28_01-13-47.dem.zip",
+    "date": "2024-08-28T01:49:30.686Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3880-0_de_vertigo-2024-08-28_01-09-26.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3880-0_de_vertigo-2024-08-28_01-09-26.dem.zip",
+    "date": "2024-08-28T01:49:31.209Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-challenger-mid3890-0_de_nuke-2024-08-28_01-13-19.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-challenger-mid3890-0_de_nuke-2024-08-28_01-13-19.dem.zip",
+    "date": "2024-08-28T01:49:32.591Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3879-0_de_vertigo-2024-08-28_01-05-01.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3879-0_de_vertigo-2024-08-28_01-05-01.dem.zip",
+    "date": "2024-08-28T01:49:34.403Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3883-0_de_vertigo-2024-08-28_01-08-11.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3883-0_de_vertigo-2024-08-28_01-08-11.dem.zip",
+    "date": "2024-08-28T01:49:40.361Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3884-0_de_dust2-2024-08-28_01-07-03.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3884-0_de_dust2-2024-08-28_01-07-03.dem.zip",
+    "date": "2024-08-28T01:53:59.342Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3889-0_de_inferno-2024-08-28_01-10-38.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3889-0_de_inferno-2024-08-28_01-10-38.dem.zip",
+    "date": "2024-08-28T01:54:06.959Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3878-0_de_nuke-2024-08-28_01-07-44.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3878-0_de_nuke-2024-08-28_01-07-44.dem.zip",
+    "date": "2024-08-28T01:54:11.672Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3891-0_de_nuke-2024-08-28_01-20-14.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3891-0_de_nuke-2024-08-28_01-20-14.dem.zip",
+    "date": "2024-08-28T01:58:58.138Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3887-0_de_inferno-2024-08-28_01-13-48.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3887-0_de_inferno-2024-08-28_01-13-48.dem.zip",
+    "date": "2024-08-28T01:59:01.147Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-challenger-mid3881-0_de_nuke-2024-08-28_01-08-37.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-challenger-mid3881-0_de_nuke-2024-08-28_01-08-37.dem.zip",
+    "date": "2024-08-28T01:59:02.114Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3893-0_de_nuke-2024-08-28_01-25-55.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3893-0_de_nuke-2024-08-28_01-25-55.dem.zip",
+    "date": "2024-08-28T02:03:55.930Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3892-0_de_anubis-2024-08-28_01-25-07.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3892-0_de_anubis-2024-08-28_01-25-07.dem.zip",
+    "date": "2024-08-28T02:08:55.640Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3894-0_de_anubis-2024-08-28_01-32-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3894-0_de_anubis-2024-08-28_01-32-25.dem.zip",
+    "date": "2024-08-28T02:09:03.563Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3900-0_de_nuke-2024-08-28_01-47-27.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3900-0_de_nuke-2024-08-28_01-47-27.dem.zip",
+    "date": "2024-08-28T02:23:49.288Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3898-0_de_nuke-2024-08-28_01-46-56.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3898-0_de_nuke-2024-08-28_01-46-56.dem.zip",
+    "date": "2024-08-28T02:24:07.027Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3901-0_de_mirage-2024-08-28_01-51-39.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3901-0_de_mirage-2024-08-28_01-51-39.dem.zip",
+    "date": "2024-08-28T02:24:10.544Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3897-0_de_anubis-2024-08-28_01-48-57.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3897-0_de_anubis-2024-08-28_01-48-57.dem.zip",
+    "date": "2024-08-28T02:28:52.368Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3895-0_de_anubis-2024-08-28_01-41-10.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3895-0_de_anubis-2024-08-28_01-41-10.dem.zip",
+    "date": "2024-08-28T02:29:03.252Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3899-0_de_vertigo-2024-08-28_01-48-49.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3899-0_de_vertigo-2024-08-28_01-48-49.dem.zip",
+    "date": "2024-08-28T02:33:53.724Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-challenger-mid3902-0_de_ancient-2024-08-28_01-51-41.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-challenger-mid3902-0_de_ancient-2024-08-28_01-51-41.dem.zip",
+    "date": "2024-08-28T02:34:03.846Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3904-0_de_anubis-2024-08-28_01-51-31.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3904-0_de_anubis-2024-08-28_01-51-31.dem.zip",
+    "date": "2024-08-28T02:34:08.445Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3906-0_de_ancient-2024-08-28_01-58-09.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3906-0_de_ancient-2024-08-28_01-58-09.dem.zip",
+    "date": "2024-08-28T02:38:53.082Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-challenger-mid3907-0_de_dust2-2024-08-28_02-00-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-challenger-mid3907-0_de_dust2-2024-08-28_02-00-25.dem.zip",
+    "date": "2024-08-28T02:38:55.609Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3908-0_de_vertigo-2024-08-28_02-01-15.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3908-0_de_vertigo-2024-08-28_02-01-15.dem.zip",
+    "date": "2024-08-28T02:43:53.389Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3909-0_de_ancient-2024-08-28_02-04-14.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3909-0_de_ancient-2024-08-28_02-04-14.dem.zip",
+    "date": "2024-08-28T02:44:01.293Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3896-0_de_nuke-2024-08-28_01-47-06.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3896-0_de_nuke-2024-08-28_01-47-06.dem.zip",
+    "date": "2024-08-28T02:48:59.447Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3914-0_de_vertigo-2024-08-28_02-09-39.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3914-0_de_vertigo-2024-08-28_02-09-39.dem.zip",
+    "date": "2024-08-28T02:54:08.672Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3912-0_de_inferno-2024-08-28_02-09-09.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3912-0_de_inferno-2024-08-28_02-09-09.dem.zip",
+    "date": "2024-08-28T02:54:15.847Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3910-0_de_dust2-2024-08-28_02-08-10.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3910-0_de_dust2-2024-08-28_02-08-10.dem.zip",
+    "date": "2024-08-28T02:54:17.489Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3913-0_de_mirage-2024-08-28_02-08-51.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3913-0_de_mirage-2024-08-28_02-08-51.dem.zip",
+    "date": "2024-08-28T02:54:28.405Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3905-0_de_inferno-2024-08-28_02-34-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3905-0_de_inferno-2024-08-28_02-34-25.dem.zip",
+    "date": "2024-08-28T02:58:49.941Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3905-0_de_inferno-2024-08-28_01-56-11.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3905-0_de_inferno-2024-08-28_01-56-11.dem.zip",
+    "date": "2024-08-28T02:59:07.615Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3915-0_de_nuke-2024-08-28_02-16-21.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3915-0_de_nuke-2024-08-28_02-16-21.dem.zip",
+    "date": "2024-08-28T02:59:34.125Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3921-0_de_dust2-2024-08-28_02-30-50.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3921-0_de_dust2-2024-08-28_02-30-50.dem.zip",
+    "date": "2024-08-28T03:09:09.507Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3918-0_de_mirage-2024-08-28_02-27-04.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3918-0_de_mirage-2024-08-28_02-27-04.dem.zip",
+    "date": "2024-08-28T03:09:10.615Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3922-0_de_ancient-2024-08-28_02-32-12.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3922-0_de_ancient-2024-08-28_02-32-12.dem.zip",
+    "date": "2024-08-28T03:09:14.847Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3924-0_de_anubis-2024-08-28_02-38-23.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3924-0_de_anubis-2024-08-28_02-38-23.dem.zip",
+    "date": "2024-08-28T03:13:54.007Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3917-0_de_mirage-2024-08-28_02-24-49.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3917-0_de_mirage-2024-08-28_02-24-49.dem.zip",
+    "date": "2024-08-28T03:13:58.701Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3920-0_de_inferno-2024-08-28_02-27-52.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3920-0_de_inferno-2024-08-28_02-27-52.dem.zip",
+    "date": "2024-08-28T03:18:53.563Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3916-0_de_inferno-2024-08-28_02-20-56.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3916-0_de_inferno-2024-08-28_02-20-56.dem.zip",
+    "date": "2024-08-28T03:24:14.651Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3925-0_de_vertigo-2024-08-28_02-42-50.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3925-0_de_vertigo-2024-08-28_02-42-50.dem.zip",
+    "date": "2024-08-28T03:28:59.422Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3926-0_de_mirage-2024-08-28_02-46-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3926-0_de_mirage-2024-08-28_02-46-30.dem.zip",
+    "date": "2024-08-28T03:29:07.093Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-challenger-mid3923-0_de_nuke-2024-08-28_02-39-47.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-challenger-mid3923-0_de_nuke-2024-08-28_02-39-47.dem.zip",
+    "date": "2024-08-28T03:29:12.723Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-challenger-mid3919-0_de_dust2-2024-08-28_02-30-38.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-challenger-mid3919-0_de_dust2-2024-08-28_02-30-38.dem.zip",
+    "date": "2024-08-28T03:39:04.837Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3932-0_de_anubis-2024-08-28_03-06-08.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3932-0_de_anubis-2024-08-28_03-06-08.dem.zip",
+    "date": "2024-08-28T03:49:10.575Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-challenger-mid3933-0_de_nuke-2024-08-28_03-10-21.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-challenger-mid3933-0_de_nuke-2024-08-28_03-10-21.dem.zip",
+    "date": "2024-08-28T03:49:11.498Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3929-0_de_anubis-2024-08-28_02-56-20.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3929-0_de_anubis-2024-08-28_02-56-20.dem.zip",
+    "date": "2024-08-28T03:49:18.525Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3930-0_de_vertigo-2024-08-28_03-00-24.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3930-0_de_vertigo-2024-08-28_03-00-24.dem.zip",
+    "date": "2024-08-28T03:49:19.697Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3934-0_de_mirage-2024-08-28_03-12-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3934-0_de_mirage-2024-08-28_03-12-25.dem.zip",
+    "date": "2024-08-28T03:59:01.108Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3928-0_de_mirage-2024-08-28_02-53-25.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3928-0_de_mirage-2024-08-28_02-53-25.dem.zip",
+    "date": "2024-08-28T03:59:11.483Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3927-0_de_inferno-2024-08-28_02-53-02.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3927-0_de_inferno-2024-08-28_02-53-02.dem.zip",
+    "date": "2024-08-28T03:59:36.435Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3938-0_de_nuke-2024-08-28_03-26-50.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3938-0_de_nuke-2024-08-28_03-26-50.dem.zip",
+    "date": "2024-08-28T04:15:51.225Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3939-0_de_vertigo-2024-08-28_03-29-07.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3939-0_de_vertigo-2024-08-28_03-29-07.dem.zip",
+    "date": "2024-08-28T04:15:55.199Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3935-0_de_nuke-2024-08-28_03-13-30.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3935-0_de_nuke-2024-08-28_03-13-30.dem.zip",
+    "date": "2024-08-28T04:16:03.938Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3937-0_de_ancient-2024-08-28_03-23-33.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3937-0_de_ancient-2024-08-28_03-23-33.dem.zip",
+    "date": "2024-08-28T04:16:12.515Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-challenger-mid3940-0_de_vertigo-2024-08-28_03-48-37.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-challenger-mid3940-0_de_vertigo-2024-08-28_03-48-37.dem.zip",
+    "date": "2024-08-28T04:31:00.412Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3944-0_de_ancient-2024-08-28_03-49-48.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3944-0_de_ancient-2024-08-28_03-49-48.dem.zip",
+    "date": "2024-08-28T04:31:01.108Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3943-0_de_ancient-2024-08-28_03-48-06.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3943-0_de_ancient-2024-08-28_03-48-06.dem.zip",
+    "date": "2024-08-28T04:31:13.998Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3945-0_de_vertigo-2024-08-28_03-56-41.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3945-0_de_vertigo-2024-08-28_03-56-41.dem.zip",
+    "date": "2024-08-28T04:40:50.273Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3942-0_de_nuke-2024-08-28_03-47-56.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3942-0_de_nuke-2024-08-28_03-47-56.dem.zip",
+    "date": "2024-08-28T04:41:04.375Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3946-0_de_dust2-2024-08-28_04-04-41.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3946-0_de_dust2-2024-08-28_04-04-41.dem.zip",
+    "date": "2024-08-28T04:50:56.610Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3947-0_de_anubis-2024-08-28_04-13-15.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3947-0_de_anubis-2024-08-28_04-13-15.dem.zip",
+    "date": "2024-08-28T04:55:55.223Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3941-0_de_anubis-2024-08-28_03-48-21.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3941-0_de_anubis-2024-08-28_03-48-21.dem.zip",
+    "date": "2024-08-28T05:00:59.328Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3948-0_de_nuke-2024-08-28_04-24-47.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3948-0_de_nuke-2024-08-28_04-24-47.dem.zip",
+    "date": "2024-08-28T15:05:15.440Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3952-0_de_anubis-2024-08-28_04-57-01.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3952-0_de_anubis-2024-08-28_04-57-01.dem.zip",
+    "date": "2024-08-28T15:05:19.986Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3950-0_de_anubis-2024-08-28_04-40-35.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3950-0_de_anubis-2024-08-28_04-40-35.dem.zip",
+    "date": "2024-08-28T15:05:24.059Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3953-0_de_ancient-2024-08-28_05-01-13.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3953-0_de_ancient-2024-08-28_05-01-13.dem.zip",
+    "date": "2024-08-28T15:05:33.460Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-contender-mid3954-0_de_ancient-2024-08-28_05-10-03.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-contender-mid3954-0_de_ancient-2024-08-28_05-10-03.dem.zip",
+    "date": "2024-08-28T15:05:40.167Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-elite-mid3956-0_de_anubis-2024-08-28_05-38-02.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-elite-mid3956-0_de_anubis-2024-08-28_05-38-02.dem.zip",
+    "date": "2024-08-28T15:05:43.903Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3959-0_de_nuke-2024-08-28_06-19-45.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3959-0_de_nuke-2024-08-28_06-19-45.dem.zip",
+    "date": "2024-08-28T15:05:49.996Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3955-0_de_mirage-2024-08-28_05-33-38.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3955-0_de_mirage-2024-08-28_05-33-38.dem.zip",
+    "date": "2024-08-28T15:05:58.854Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3957-0_de_inferno-2024-08-28_05-39-22.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3957-0_de_inferno-2024-08-28_05-39-22.dem.zip",
+    "date": "2024-08-28T15:06:02.719Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-prospect-mid3960-0_de_nuke-2024-08-28_07-11-21.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-prospect-mid3960-0_de_nuke-2024-08-28_07-11-21.dem.zip",
+    "date": "2024-08-28T15:06:08.850Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3949-0_de_nuke-2024-08-28_04-29-46.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3949-0_de_nuke-2024-08-28_04-29-46.dem.zip",
+    "date": "2024-08-28T15:06:11.840Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3951-0_de_dust2-2024-08-28_04-57-36.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3951-0_de_dust2-2024-08-28_04-57-36.dem.zip",
+    "date": "2024-08-28T15:06:15.838Z"
+  },
+  {
+    "fileName": "s15/Combines/08-27/combine-recruit-mid3958-0_de_anubis-2024-08-28_06-07-55.dem.zip",
+    "fullUrl": "https://cscdemos.nyc3.digitaloceanspaces.com/s15/Combines/08-27/combine-recruit-mid3958-0_de_anubis-2024-08-28_06-07-55.dem.zip",
+    "date": "2024-08-28T15:06:21.645Z"
   }
 ]

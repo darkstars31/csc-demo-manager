@@ -20,15 +20,19 @@ model AnalytikillProfile {
 }
 
 model Article {
-  id               Int      @id @default(autoincrement())
-  title            String   @db.VarChar(255)
-  subtitle         String   @db.VarChar(255)
-  tags             String[] @db.VarChar(255)
+  id               Int       @id @default(autoincrement())
+  title            String    @db.VarChar(255)
+  subtitle         String    @db.VarChar(255)
+  tags             String[]  @db.VarChar(255)
   content          String
-  anonymous        Boolean  @default(false)
-  approvalState    String   @db.VarChar(255)
+  anonymous        Boolean   @default(false)
+  approvalState    String    @db.VarChar(255)
   metadata         String
   cscPlayerCacheId Int
+  createdAt        DateTime  @default(now())
+  deleted          Boolean   @default(false)
+  deletedAt        DateTime?
+  updatedAt        DateTime  @default(now())
 }
 
 model CscPlayerCache {
@@ -64,6 +68,7 @@ model ExtendedMatches {
   matchType String   @db.VarChar(255)
   data      Json
   createdAt DateTime @default(now())
+  metadata  Json?
 }
 
 model ExtendedStats {
@@ -72,6 +77,7 @@ model ExtendedStats {
   season    Int
   data      Json
   createdAt DateTime @default(now())
+  metadata  Json?
 }
 
 model FaceitCache {
@@ -87,6 +93,10 @@ model FaceitCache {
   updatedAt               DateTime @default(now())
   faceitName              String   @db.VarChar(255)
   faceitIdentifier        String   @db.VarChar(255)
+  averageKDRatio          Float?   @db.Real
+  averageKillsPerRound    Float?   @db.Real
+  eloSnapshots            Json?
+  mapSpecificStats        Json?
 }
 
 model Names {

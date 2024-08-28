@@ -27,7 +27,7 @@ const parseDemoUrl = (url: string) => ({
 })
 
 export const downloadFile = async (demoUrl: string, destinationPath: string) => {
-	console.info(`Downloading ... ${demoUrl.split("/").at(-1)}`);
+	console.info(`... ${demoUrl.split("/").at(-1)}`);
 	try {
 		const response = await axios.get(config.url + demoUrl, { responseType: 'stream', headers: { "accept-encoding": "gzip, deflate, br" } });
 		const writer = fs.createWriteStream(destinationPath + `${demoUrl.split("/").at(-1)}`);
@@ -63,7 +63,7 @@ export const downloadFiles = async (filesToProcess: any[]) => {
 					downloadFile(demoUrl, config.downloadPath
 				).then( () => { 
 					downloadProgress++; 
-					progress("Downloading Demos", downloadProgress, filesToProcess.length);
+					progress("Downloading Demos", downloadProgress, promisesList.length);
 				}
 			));
 		});
