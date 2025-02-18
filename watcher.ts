@@ -1,4 +1,4 @@
-import { main } from "./index.ts"
+import { main } from "./index-single.ts"
 
 const minutesToRepeat = 5;
 let runCount = 0;
@@ -8,7 +8,11 @@ let runCount = 0;
     setInterval(() => {
         runCount++;
         console.info(`Starting main... Count ${runCount}`);
-        main();
+        try {
+            main();
+        } catch (error) {
+            console.error(error);
+        }
         console.info("Sleeping...");
     }, 1000 * 60 * minutesToRepeat);
 }

@@ -1,7 +1,8 @@
 import { downloadDemos } from "./src/demodownloader.ts"
 import { unzipFiles } from "./src/fileUnzipper.ts";
 import { moveDemosAndStartParser, processDemosThroughAnalyzer } from "./src/demoparser.ts";
-import { readCSVs, readJsons } from "./src/processMatchData.ts";
+import { processIndividualMatchData } from "./src/processIndividualMatches.ts";
+import { processAggregatedDataset } from "./src/process.ts";
 import { downloadDemoAnalyzerCLI } from "./src/downloadDemoAnalyzer.ts";
 
 
@@ -26,8 +27,8 @@ export const main = async () => {
 	//await moveDemosAndStartParser();
 	await processDemosThroughAnalyzer();
 
-	// await readCSVs();
-	await readJsons();
+	await processIndividualMatchData();
+	await processAggregatedDataset();
 
 	console.timeEnd("execution time");
 	console.info("Finished");

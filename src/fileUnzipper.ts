@@ -21,6 +21,7 @@ const keepCompleteFiles = async ( filePaths: string[]) => {
 }
 
 export const unzipFiles = async () => {
+	const errors: string[] = [];
 	const files = fs.readdirSync(config.downloadPath);
 	const zipFiles = await keepCompleteFiles(files.filter((file: any) => file.endsWith(".zip")));
 	const failures: any[] = [];
@@ -32,12 +33,13 @@ export const unzipFiles = async () => {
 				progress('File Unzip progress', progressCounter, zipFiles.length);
 			})
 			.catch( (err: any) => {
+				errors.push(err.message);
 				failures.push(file);
 			});
 	});
 	const results = await Promise.allSettled(zipPromises);
 	if( failures.length > 0 ) {
-		console.info(`File Unzip failures:`, failures);
+		console.info(`File Unzip failures:`, failures, errors);
 	}
 
 	return results;
@@ -69,11 +71,13 @@ export const unzipFile = async (filePath: string) => {
 			}
 			const basePath = `${config.downloadPath}/unzipped`;
 			const newFileName = fileName?.replace(".zip", "")
-			fs.rename(`${basePath}/demos/${newFileName}`, `${basePath}/${newFileName}`, (err) => {
-				if (err) console.warn(`Error moving file /demos/${newFileName} : `, err);
-			});
+			if( fs.existsSync(`${basePath}/demos/${newFileName}`)) {
+				fs.rename(`${basePath}/demos/${newFileName}`, `${basePath}/${newFileName}`, (err) => {
+					if (err) console.warn(`Error moving file /demos/${newFileName} : `, err);
+				});
+			}
 			fs.unlinkSync(fullPath);
-			resolve(1);
+			resolve(`${basePath}/${newFileName}`);
 		})
 	})
 

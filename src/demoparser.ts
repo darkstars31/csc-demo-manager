@@ -48,6 +48,30 @@ export const moveDemosAndStartParser = async () => {
 	});
 }
 
+const onError = (demo, err: any) => {
+	errors.push({
+		name: demo.name,
+		error: err
+	});
+	console.warn(err)
+}
+const onStart = (demo) => {
+	progress(`StartedAnalyzing`,demosAnalyized, demos.length, demo.name);
+}
+const onEnd = (demo, exitCode: number) => {
+	if( exitCode === 0) {
+		fs.unlinkSync(demo.path + '/' + demo.name);
+	} else {
+		if (!fs.existsSync(config.downloadPath + "/failedToParse")) {
+			console.info(`Creating directory /failedToParse`);
+			fs.mkdirSync(config.downloadPath + "/failedToParse");
+		}
+		fs.rename(`${config.downloadPath}/${demo.name}`, `${config.downloadPath}/failedToParse/${demo.name}`, (err) => {
+			if (err) console.warn(`Error moving file /failedToParse/${demo.name} : `, err);
+		});
+	}
+}
+
 export const processDemosThroughAnalyzer = async () => {
 	const demos = (await fsPromises.readdir(`${config.downloadPath}unzipped`, { withFileTypes: true })).filter( demo => demo.name.endsWith(".dem") );
 	console.info(`Starting Demo Analyzer, Found: ${demos.length} `);
@@ -55,50 +79,48 @@ export const processDemosThroughAnalyzer = async () => {
 
 	const errors: { name: any; error: string; }[] = [];
 
-	const demoPromises = demos.map(async (demo: any) => 
+	const demoPromises = demos.map(async (demo: any) => {
 		parseLimit(async () => {
-			await analyzeDemo({
-				demoPath: demo.path + '/' + demo.name,
-				outputFolderPath: './out',
-				format: ExportFormat.JSON,
-				source: DemoSource.FaceIt,
-				analyzePositions: false,
-				minify: true,
-				onStderr: (err) => {
-					errors.push({
-						name: demo.name,
-						error: err
-					});
-					console.warn(err)
-				},
-				//onStdout: console.log,
-				onStart: () => {
-					progress(`StartedAnalyzing`,demosAnalyized, demos.length, demo.name);
-				},
-				onEnd: ( exitCode: number) => {
-					if( exitCode === 0) {
-						fs.unlinkSync(demo.path + '/' + demo.name);
-					} else {
-						if (!fs.existsSync(config.downloadPath + "/failedToParse")) {
-							console.info(`Creating directory /failedToParse`);
-							fs.mkdirSync(config.downloadPath + "/failedToParse");
-						}
-						fs.rename(`${config.downloadPath}/${demo.name}`, `${config.downloadPath}/failedToParse/${demo.name}`, (err) => {
-							if (err) console.warn(`Error moving file /failedToParse/${demo.name} : `, err);
-						});
-					}
-				},
-			  });
-			  demosAnalyized++;
-			  progress(`Completed Analysis`, demosAnalyized, demos.length, demo.name);
-		}
-		));
+			processIndividualDemo(demo);
+			demosAnalyized++;
+			progress(`Completed Analysis`, demosAnalyized, demos.length, demo.name);
+		});
+	})
 	
 	await Promise.allSettled(demoPromises).then(() => {
 		if(errors.length > 0) {
 			console.error("Errors: ", JSON.stringify(errors));
 		}
 		console.info( demos.length ? "Finished Parsing!" : "Nothing to parse, moving to Processing..");
+	});
+
+}
+
+export const processIndividualDemo = async ( demoPath ) => {
+	const demoName = demoPath.split("/").at(-1);
+	return await analyzeDemo({
+		demoPath: demoPath,
+		outputFolderPath: './out',
+		format: ExportFormat.JSON,
+		source: DemoSource.FaceIt,
+		analyzePositions: false,
+		minify: true,
+		onStderr: (err) => onError({ name:demoName }, err),
+		//onStdout: console.log,
+		onStart: () => console.info(`Started Analyzing ${demoName}`),
+		onEnd: (exitCode: number) => {
+			if( exitCode === 0) {
+				fs.unlinkSync(demoPath);
+			} else {
+				if (!fs.existsSync(config.downloadPath + "/failedToParse")) {
+					console.info(`Creating directory /failedToParse`);
+					fs.mkdirSync(config.downloadPath + "/failedToParse");
+				}
+				fs.rename(`${config.downloadPath}/${demoName}`, `${config.downloadPath}/failedToParse/${demoName}`, (err) => {
+					if (err) console.warn(`Error moving file /failedToParse/${demoName} : `, err);
+				});
+			}
+		}
 	});
 }
  

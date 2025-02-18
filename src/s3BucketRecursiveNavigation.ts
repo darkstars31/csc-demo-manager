@@ -11,7 +11,7 @@ export const recuriveNavigate = async (directory: any, result: any) => {
 
 	const jsonizedResponse = await xml2js.parseStringPromise(data);
 	const discoveredDirectories = jsonizedResponse.ListBucketResult.CommonPrefixes?.map((item: any) => item.Prefix[0]) ?? [];
-	process.stdout.write(`\rBucket Scanning ${directory} => ${discoveredDirectories}`);
+	process.stdout.write(`\nBucket Scanning ${directory} => ${discoveredDirectories}`);
 	const files = jsonizedResponse.ListBucketResult.Contents?.map((item: any) => item) ?? [];
 
 	if (files.length > 0) {
@@ -19,9 +19,17 @@ export const recuriveNavigate = async (directory: any, result: any) => {
 		result.numFiles += files.length;
 	}
 
+
+
 	// Avoid pre-match Scrims
-	const directoriesToSiftThrough = discoveredDirectories?.filter((directory: any) => {
-		return !directory.includes("Scrims")
+	const directoriesToSiftThrough = discoveredDirectories?.filter((directory: string) => {
+		for (const word of ["Scrims", "scrims", "P0"]){
+			if (directory.includes(word)) {
+				process.stdout.write(`\nSkipping ${directory}`);
+				return false;
+			}
+		}
+		return true; 
 	}) ?? [];
 
 	const promises = directoriesToSiftThrough.map((directory: any) => recuriveNavigate(directory, result));
