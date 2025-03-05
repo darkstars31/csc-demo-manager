@@ -69,8 +69,10 @@ export const unzipFile = async (filePath: string) => {
 				console.info(`Failed to unpack ${fileName} w/ error: ${err}`);
 				reject(0);
 			}
-			const basePath = `${config.downloadPath}/unzipped`;
+			const basePath = `${config.downloadPath}unzipped`;
 			const newFileName = fileName?.replace(".zip", "")
+			if (newFileName?.indexOf(".dem") === -1) {
+			}
 			if( fs.existsSync(`${basePath}/demos/${newFileName}`)) {
 				fs.rename(`${basePath}/demos/${newFileName}`, `${basePath}/${newFileName}`, (err) => {
 					if (err) console.warn(`Error moving file /demos/${newFileName} : `, err);

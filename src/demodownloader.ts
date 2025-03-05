@@ -7,6 +7,7 @@ import { demoHistoryDB } from "../lowdb-wrapper.ts";
 import pLimit from "p-limit";
 import { progress } from "./progressUtils.ts";
 import { prisma } from "../prisma-wrapper.ts";
+import { match } from "assert";
 
 const args = process.argv.slice(2);
 const fileDownLoadlimit = pLimit(8);
@@ -81,26 +82,16 @@ export const downloadDemos = async() => {
 
 
 
-export const filterExistingProcessedMatchDemos = async ( file: { Key: string[]; }) => {
-	let existingMatchIdentifiers = [];
-	if ( existingMatchesCache.length === 0 ) {
-		const existingMatches = await prisma.extendedMatches.findMany({ select: { matchId: true, matchType: true }});
-		existingMatchIdentifiers = existingMatches?.map( match => {
-			if( match.matchType === "Combine" ) return `combine-${match.matchId}`;
-			return match.matchId;
-		}).filter( Boolean ) ?? [];
-		existingMatchesCache.push(...existingMatchIdentifiers);
-	} else {
-		existingMatchIdentifiers = existingMatchesCache;
+export const filterExistingProcessedMatchDemos = ( existingMatches: { matchId: string; matchType: string; }[], file: { Key: string[]; }) => {
+	if( file.Key[0].includes("Combine") ){
+		return existingMatches.filter(match => match.matchType === "Combine").some( match =>
+			[
+				file.Key[0].includes(`combine-`),
+				file.Key[0].includes(`-mid${match.matchId}`)
+			].filter(Boolean)
+		)
 	}
-
-	const doesExist = existingMatchIdentifiers.some( (matchId: string ) => {
-		const demoFileName: string = file.Key[0].split("/").at(-1) ?? "";
-		if( demoFileName.includes(`combine`) ) {
-			return demoFileName.includes(`combine-${matchId}`);
-		}
-		return demoFileName.includes(matchId);
-	})
-
-	return doesExist;
+	return existingMatches
+		.filter(match => match.matchType === "Regulation")
+		.some( (match) => file.Key[0].includes(`-mid${match.matchId}`))
 }

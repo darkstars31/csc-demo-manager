@@ -14,6 +14,7 @@ const parseLimit = pLimit(8);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const errors = [];
 
 export const copyDir = async (src: string, dest: string) => {
 	await fsPromises.mkdir(dest, { recursive: true });
@@ -55,6 +56,7 @@ const onError = (demo, err: any) => {
 	});
 	console.warn(err)
 }
+
 const onStart = (demo) => {
 	progress(`StartedAnalyzing`,demosAnalyized, demos.length, demo.name);
 }
@@ -96,10 +98,11 @@ export const processDemosThroughAnalyzer = async () => {
 
 }
 
-export const processIndividualDemo = async ( demoPath ) => {
+export const analyzeIndividualDemo = async ( demoPath ) => {
+	const demoFilePath = demoPath.indexOf(".dem") > 0 ? demoPath : `${demoPath}.dem`
 	const demoName = demoPath.split("/").at(-1);
 	return await analyzeDemo({
-		demoPath: demoPath,
+		demoPath: demoFilePath,
 		outputFolderPath: './out',
 		format: ExportFormat.JSON,
 		source: DemoSource.FaceIt,
@@ -110,18 +113,19 @@ export const processIndividualDemo = async ( demoPath ) => {
 		onStart: () => console.info(`Started Analyzing ${demoName}`),
 		onEnd: (exitCode: number) => {
 			if( exitCode === 0) {
-				fs.unlinkSync(demoPath);
+				fs.unlinkSync(demoFilePath);
 			} else {
-				if (!fs.existsSync(config.downloadPath + "/failedToParse")) {
+				console.warn(`Parsing failure, exit code: ${exitCode}`);
+				if (!fs.existsSync(config.downloadPath + "failedToParse")) {
 					console.info(`Creating directory /failedToParse`);
-					fs.mkdirSync(config.downloadPath + "/failedToParse");
+					fs.mkdirSync(config.downloadPath + "failedToParse");
 				}
-				fs.rename(`${config.downloadPath}/${demoName}`, `${config.downloadPath}/failedToParse/${demoName}`, (err) => {
+				fs.rename(`${config.downloadPath}/unzipped/${demoName}`, `${config.downloadPath}failedToParse/${demoName}`, (err) => {
 					if (err) console.warn(`Error moving file /failedToParse/${demoName} : `, err);
 				});
 			}
 		}
-	});
+	}).catch((err) => onError({ name:demoName }, err));
 }
  
 //moveDemosAndStartParser();
